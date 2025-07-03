@@ -55,7 +55,7 @@ From studying at Universidad de Palermo to mastering the rigorous 42 School curr
 
 ## 🏆 42 School Highlights
 
-- **Current Rank**: 5/13
+- **Current Circle**: 5/7
 - **Focus Areas**: System programming, algorithms, Unix systems
 - **Key Skills Developed**: Peer-to-peer learning, collaborative problem-solving, self-directed learning
 
@@ -66,8 +66,7 @@ I'm always open to discussing new opportunities, collaborating on interesting pr
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
-[![42 Profile](https://img.shields.io/badge/42_School-000000?style=for-the-badge&logo=42&logoColor=white)](https://profile.intra.42.fr/users/your-login)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:entinosusini@gmail.com)
 
 </div>
 
