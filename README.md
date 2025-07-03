@@ -51,3 +51,32 @@ Currently, I'm in my final stretch at **42 School** (Rank 5) - an intensive prog
 🌱 **Expanding Full-Stack Development Skills**
 
 ## 🌍 My Journey
+From studying at Universidad de Palermo to mastering the rigorous 42 School curriculum, every step has prepared me for the challenges ahead. My international experience has given me a unique perspective and the resilience to excel in diverse environments.
+
+## 🏆 42 School Highlights
+
+- **Current Rank**: 5/13
+- **Focus Areas**: System programming, algorithms, Unix systems
+- **Key Skills Developed**: Peer-to-peer learning, collaborative problem-solving, self-directed learning
+
+## 📫 Let's Connect!
+
+I'm always open to discussing new opportunities, collaborating on interesting projects, or simply connecting with fellow developers!
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![42 Profile](https://img.shields.io/badge/42_School-000000?style=for-the-badge&logo=42&logoColor=white)](https://profile.intra.42.fr/users/your-login)
+
+</div>
+
+---
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=ValGSgit&style=for-the-badge&color=brightgreen" alt="Profile Views"/>
+</div>
+
+<div align="center">
+  <i>Ready to contribute, learn, and grow with your team! 🚀</i>
+</div>
