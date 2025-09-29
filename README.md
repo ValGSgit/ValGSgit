@@ -24,6 +24,9 @@ Currently, I'm in my final stretch at **42 School** (Rank 5) - an intensive prog
 - C/C++
 - Python
 - Shell Scripting
+- Fortran
+- HTML
+- SQL/MySQL
 
 **Tools & Technologies:**
 - Git & GitHub
