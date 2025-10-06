@@ -10,7 +10,7 @@
 
 I'm a 23-year-old software developer passionate about creating innovative solutions and tackling complex challenges. Five years ago, I made the bold decision to move from Argentina to Vienna, Austria, where I've been building my path in the tech world.
 
-Currently, I'm in my final stretch at **42 School** (Rank 5) - an intensive programming curriculum that has shaped my problem-solving abilities and technical skills. My journey has taught me that the best solutions often come from persistence, creativity, and collaborative thinking.
+Currently, I'm in my final stretch at **42 School** (Rank 6) - an intensive programming curriculum that has shaped my problem-solving abilities and technical skills. My journey has taught me that the best solutions often come from persistence, creativity, and collaborative thinking.
 
 ### 🌟 What drives me:
 - 💡 **Adaptability**: Thriving in new environments and embracing change
@@ -68,7 +68,7 @@ I'm always open to discussing new opportunities, collaborating on interesting pr
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/valentinogs)
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:entinosusini@gmail.com)
 
 </div>
