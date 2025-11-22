@@ -10,11 +10,12 @@ url: "https://ValGSgit.github.io" # the base hostname & protocol for your site
 # Personal information
 author:
   name: Valentino Garcia Susini
-  title: Software Developer
-  location: Vienna, Austria
+  title: Full-Stack Software Developer
+  location: 1020 Vienna, Austria
   github: ValGSgit
   linkedin: valentinogs
-  email: entinosusini@gmail.com
+  email: valentinogsusini@gmail.com
+  phone: +43 676 750 41 83
 
 # Build settings
 markdown: kramdown
