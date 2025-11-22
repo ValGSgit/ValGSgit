@@ -1337,15 +1337,32 @@ section {
 }
 
 .pdf-section {
-  margin-top: var(--space-2xl);
-  padding-top: var(--space-2xl);
-  border-top: 2px solid var(--border-color);
+  margin-top: var(--space-3xl) !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+}
+
+.pdf-download-notice {
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  border: 1px solid var(--border-light);
+}
+
+.pdf-download-notice p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  font-weight: 500;
 }
 
 .pdf-viewer {
   background-color: var(--bg-secondary);
-  padding: var(--space-md);
-  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
 }
 
 /* About Page Styles */

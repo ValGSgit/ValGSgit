@@ -201,13 +201,13 @@ Jekyll site configuration:
 
 ```yaml
 Site Information:
-- Title: Valentino Giusti Susini - Software Developer
+- Title: Valentino Garcia Susini - Software Developer
 - Email: entinosusini@gmail.com
 - Description: Professional portfolio
 - URL: https://valgsit.github.io
 
 Author Information:
-- Name: Valentino Giusti Susini
+- Name: Valentino Garcia Susini
 - Title: Software Developer
 - Location: Vienna, Austria
 - GitHub: ValGSgit
