@@ -2565,3 +2565,145 @@ input:focus {
     padding: var(--space-lg);
   }
 }
+
+/* Language Selector Styles */
+.language-selector {
+  position: relative;
+}
+
+.lang-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid var(--color-border, #e5e7eb);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md, 0.5rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  color: var(--color-text, #1f2937);
+}
+
+.lang-button:hover {
+  background: var(--color-bg-secondary, #f9fafb);
+  border-color: var(--color-primary, #3b82f6);
+}
+
+.lang-flag {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.lang-code {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: white;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: var(--radius-md, 0.5rem);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.lang-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-text, #1f2937);
+  transition: background 0.2s ease;
+}
+
+.lang-option:hover {
+  background: var(--color-bg-secondary, #f3f4f6);
+}
+
+.lang-option.active {
+  background: var(--color-primary-light, #eff6ff);
+  color: var(--color-primary, #3b82f6);
+  font-weight: 500;
+}
+
+.lang-option .lang-flag {
+  font-size: 1.4rem;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .language-selector {
+    margin: 0.5rem 0;
+  }
+  
+  .lang-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .lang-dropdown {
+    position: relative;
+    top: 0.5rem;
+    right: auto;
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid var(--color-border, #e5e7eb);
+    margin-top: 0.5rem;
+  }
+  
+  .lang-dropdown.show {
+    position: relative;
+  }
+}
+
+/* Dark mode support (if applicable) */
+@media (prefers-color-scheme: dark) {
+  .lang-button {
+    color: #f3f4f6;
+    border-color: #374151;
+  }
+  
+  .lang-button:hover {
+    background: #1f2937;
+  }
+  
+  .lang-dropdown {
+    background: #111827;
+    border-color: #374151;
+  }
+  
+  .lang-option {
+    color: #f3f4f6;
+  }
+  
+  .lang-option:hover {
+    background: #1f2937;
+  }
+  
+  .lang-option.active {
+    background: #1e40af;
+    color: #60a5fa;
+  }
+}
