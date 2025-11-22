@@ -18,7 +18,6 @@ author:
 
 # Build settings
 markdown: kramdown
-theme: minima
 
 # Collections
 collections:
