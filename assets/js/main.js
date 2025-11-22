@@ -138,22 +138,23 @@
 
   // Handle hash navigation on page load
   function initHashNavigation() {
-    // Check if there's a hash in the URL when the page loads
-    if (window.location.hash) {
+    // Prevent automatic scrolling to hash on initial page load
+    // The browser naturally scrolls to hash fragments, but we want to start at the top
+    
+    // If there's a hash in the URL and we just loaded the page
+    if (window.location.hash && !sessionStorage.getItem('allowHashScroll')) {
+      // Temporarily remove the hash to prevent browser scroll
       const hash = window.location.hash;
-      const target = document.querySelector(hash);
+      history.replaceState(null, null, ' '); // Clear hash without page reload
       
-      if (target) {
-        // Wait for page to fully load before scrolling
-        const SCROLL_DELAY = 100; // Small delay to ensure layout is complete
-        setTimeout(() => {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }, SCROLL_DELAY);
-      }
+      // Restore the hash after a moment, so it's in the URL but doesn't trigger scroll
+      setTimeout(() => {
+        history.replaceState(null, null, hash);
+      }, 0);
     }
+    
+    // Mark that the page has loaded, future hash navigation should work normally
+    sessionStorage.setItem('allowHashScroll', 'true');
   }
 
   // Initialize all features when DOM is ready
