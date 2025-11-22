@@ -25,7 +25,7 @@
   <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,12 +46,12 @@
   {% include footer.html %}
   
   <!-- Scripts -->
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   {% if page.custom_js %}
-    <script src="{{ page.custom_js | relative_url }}"></script>
+    <script src="{{ page.custom_js | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   {% endif %}
   {% if page.load_github_projects %}
-    <script src="{{ '/assets/js/github-projects.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/github-projects.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   {% endif %}
 </body>
 </html>

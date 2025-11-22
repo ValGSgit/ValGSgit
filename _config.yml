@@ -49,9 +49,9 @@ navigation:
   - title: Projects
     url: /#projects
   - title: CV
-    url: /cv
+    url: /cv.html
   - title: About Me
-    url: /about
+    url: /about.html
   - title: Contact
     url: /#contact
 
