@@ -68,7 +68,7 @@ const translations = {
       "viewCV": "View CV",
       "projects": "Projects",
       "aboutMe": "About Me",
-      "copyright": "2025 Valentino Garcia Susini. All rights reserved.",
+      "copyright": "© 2025 Valentino Garcia Susini. All rights reserved.",
       "hostedNote": "Static site hosted on GitHub Pages"
     }
   },
@@ -140,7 +140,7 @@ const translations = {
       "viewCV": "Ver CV",
       "projects": "Proyectos",
       "aboutMe": "Sobre Mí",
-      "copyright": "2025 Valentino Garcia Susini. Todos los derechos reservados.",
+      "copyright": "© 2025 Valentino Garcia Susini. Todos los derechos reservados.",
       "hostedNote": "Sitio estático alojado en GitHub Pages"
     }
   },
@@ -212,7 +212,7 @@ const translations = {
       "viewCV": "Lebenslauf Ansehen",
       "projects": "Projekte",
       "aboutMe": "Über Mich",
-      "copyright": "2025 Valentino Garcia Susini. Alle Rechte vorbehalten.",
+      "copyright": "© 2025 Valentino Garcia Susini. Alle Rechte vorbehalten.",
       "hostedNote": "Statische Website auf GitHub Pages gehostet"
     }
   },
@@ -284,7 +284,7 @@ const translations = {
       "viewCV": "Visualizza CV",
       "projects": "Progetti",
       "aboutMe": "Chi Sono",
-      "copyright": "2025 Valentino Garcia Susini. Tutti i diritti riservati.",
+      "copyright": "© 2025 Valentino Garcia Susini. Tutti i diritti riservati.",
       "hostedNote": "Sito statico ospitato su GitHub Pages"
     }
   }
