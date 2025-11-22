@@ -359,17 +359,17 @@ Mobile-Specific Optimizations:
 
 ```html
 Home Page:
-  Title: Valentino Giusti Susini - Software Developer
+  Title: Valentino Garcia Susini - Software Developer
   Description: Professional portfolio showcasing...
   Keywords: Software Developer, C/C++, Python, Vienna...
 
 CV Page:
-  Title: Curriculum Vitae - Valentino Giusti Susini
+  Title: Curriculum Vitae - Valentino Garcia Susini
   Description: Professional experience and education...
   Keywords: CV, Resume, Software Developer...
 
 About Page:
-  Title: About Me - Valentino Giusti Susini
+  Title: About Me - Valentino Garcia Susini
   Description: Personal background and journey...
   Keywords: About, Background, International...
 ```

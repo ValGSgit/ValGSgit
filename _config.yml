@@ -1,5 +1,5 @@
 # Site settings
-title: Valentino Garcia Susini - Full Stack Software Developer
+title: Valentino Garcia Susini - Software Developer
 email: entinosusini@gmail.com
 description: >-
   Professional portfolio showcasing software development skills, projects, and experience.
@@ -18,7 +18,6 @@ author:
 
 # Build settings
 markdown: kramdown
-theme: minima
 
 # Collections
 collections:

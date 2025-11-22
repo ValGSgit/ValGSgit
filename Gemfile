@@ -1,10 +1,7 @@
 source "https://rubygems.org"
 
-# Jekyll version
-gem "jekyll", "~> 3.9.3"
-
-# GitHub Pages gem
-gem "github-pages", group: :jekyll_plugins
+# Jekyll version - using 4.x for better compatibility
+gem "jekyll", "~> 4.3.0"
 
 # Plugins
 group :jekyll_plugins do

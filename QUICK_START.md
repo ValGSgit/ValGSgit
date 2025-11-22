@@ -61,7 +61,7 @@ Want to personalize before sharing? Do these quick updates:
 Edit `_config.yml`:
 ```yaml
 author:
-  name: Valentino Giusti Susini      # Your name
+  name: Valentino Garcia Susini      # Your name
   title: Software Developer           # Your title
   location: Vienna, Austria          # Your location
   github: ValGSgit                   # Your GitHub username
