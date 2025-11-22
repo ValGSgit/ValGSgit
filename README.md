@@ -12,6 +12,9 @@ I'm a 23-year-old software developer passionate about creating innovative soluti
 
 Currently, I'm in my final stretch at **42 School** (Rank 6) - an intensive programming curriculum that has shaped my problem-solving abilities and technical skills. My journey has taught me that the best solutions often come from persistence, creativity, and collaborative thinking.
 
+### 🌐 Portfolio
+Check out my professional portfolio at [valGSgit.github.io](https://valGSgit.github.io) - available in English, Spanish, German, and Italian!
+
 ### 🌟 What drives me:
 - 💡 **Adaptability**: Thriving in new environments and embracing change
 - 🔧 **Problem Solving**: Breaking down complex challenges into manageable solutions  
