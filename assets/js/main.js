@@ -145,12 +145,13 @@
       
       if (target) {
         // Wait for page to fully load before scrolling
+        const SCROLL_DELAY = 100; // Small delay to ensure layout is complete
         setTimeout(() => {
           target.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
           });
-        }, 100);
+        }, SCROLL_DELAY);
       }
     }
   }
