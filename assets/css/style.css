@@ -72,6 +72,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Account for fixed header */
 }
 
 body {
@@ -431,6 +432,11 @@ a:hover {
 
 section {
   padding: var(--space-3xl) 0;
+}
+
+/* Ensure sections with IDs have proper scroll offset for fixed header */
+section[id] {
+  scroll-margin-top: 100px;
 }
 
 .section-title {
