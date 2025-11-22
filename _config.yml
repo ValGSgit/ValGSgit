@@ -45,15 +45,15 @@ plugins:
 # Navigation
 navigation:
   - title: Home
-    url: index.html
+    url: /
   - title: Projects
-    url: index.html#projects
+    url: /#projects
   - title: CV
-    url: cv.html
+    url: /cv.html
   - title: About Me
-    url: about.html
+    url: /about.html
   - title: Contact
-    url: index.html#contact
+    url: /#contact
 
 # GitHub API settings
 github_username: ValGSgit
