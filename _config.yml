@@ -5,7 +5,7 @@ description: >-
   Professional portfolio showcasing software development skills, projects, and experience.
   Aspiring software developer with expertise in C/C++, Python, and system programming.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://valgsit.github.io" # the base hostname & protocol for your site
+url: "https://ValGSgit.github.io" # the base hostname & protocol for your site
 
 # Personal information
 author:

@@ -17,7 +17,7 @@ Added a GitHub Actions workflow (`.github/workflows/jekyll.yml`) that:
 1. Review and merge this pull request
 2. The workflow will automatically trigger and deploy your site
 3. Wait 2-3 minutes for the build to complete
-4. Visit https://valgsit.github.io/ to see your live site
+4. Visit https://ValGSgit.github.io/ to see your live site
 
 ### Option 2: Verify GitHub Pages Settings
 After merging, ensure GitHub Pages is configured correctly:
@@ -28,7 +28,7 @@ After merging, ensure GitHub Pages is configured correctly:
    - **Branch**: N/A (deployed by workflow)
 3. After the first successful workflow run, you'll see:
    - ✅ Green checkmark indicating successful deployment
-   - Your site URL: https://valgsit.github.io/
+   - Your site URL: https://ValGSgit.github.io/
 
 ## How to Verify It's Working
 
@@ -39,7 +39,7 @@ After merging, ensure GitHub Pages is configured correctly:
 4. Click on it to see build logs if needed
 
 ### Check Your Live Site
-1. Visit https://valgsit.github.io/
+1. Visit https://ValGSgit.github.io/
 2. Your portfolio should load correctly
 3. All pages (Home, CV, About) should be accessible
 4. Projects should load from GitHub API
@@ -90,8 +90,8 @@ You can also trigger a manual deployment:
 
 ### URL Structure
 Since the repository name matches your username (`ValGSgit`), this is a **user site**:
-- **Live URL**: https://valgsit.github.io/
-- **NOT**: https://valgsit.github.io/ValGSgit/
+- **Live URL**: https://ValGSgit.github.io/
+- **NOT**: https://ValGSgit.github.io/ValGSgit/
 - **baseurl** in `_config.yml`: "" (empty, which is correct)
 
 ---
