@@ -1,9 +1,10 @@
 # Site settings
-title: Valentino Garcia Susini - Software Developer
-email: entinosusini@gmail.com
+title: Valentino Garcia Susini - Full-Stack Software Developer
+email: valentinogsusini@gmail.com
 description: >-
-  Professional portfolio showcasing software development skills, projects, and experience.
-  Aspiring software developer with expertise in C/C++, Python, and system programming.
+  Professional portfolio showcasing full-stack software development skills, projects, and experience.
+  Dedicated developer with expertise in C, C++, Python, and system programming, specializing in 
+  cybersecurity and emerging technologies.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ValGSgit.github.io" # the base hostname & protocol for your site
 
