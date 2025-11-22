@@ -1,5 +1,5 @@
 # Site settings
-title: Valentino Giusti Susini - Software Developer
+title: Valentino Garcia Susini - Software Developer
 email: entinosusini@gmail.com
 description: >-
   Professional portfolio showcasing software development skills, projects, and experience.
@@ -9,7 +9,7 @@ url: "https://ValGSgit.github.io" # the base hostname & protocol for your site
 
 # Personal information
 author:
-  name: Valentino Giusti Susini
+  name: Valentino Garcia Susini
   title: Software Developer
   location: Vienna, Austria
   github: ValGSgit
