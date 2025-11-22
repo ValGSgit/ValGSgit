@@ -142,19 +142,20 @@
     // The browser naturally scrolls to hash fragments, but we want to start at the top
     
     // If there's a hash in the URL and we just loaded the page
-    if (window.location.hash && !sessionStorage.getItem('allowHashScroll')) {
+    if (window.location.hash && !window.sessionStorage.getItem('allowHashScroll')) {
       // Temporarily remove the hash to prevent browser scroll
       const hash = window.location.hash;
-      history.replaceState(null, null, ' '); // Clear hash without page reload
+      // Use current pathname and search to maintain URL structure
+      history.replaceState(null, null, window.location.pathname + window.location.search);
       
       // Restore the hash after a moment, so it's in the URL but doesn't trigger scroll
       setTimeout(() => {
-        history.replaceState(null, null, hash);
+        history.replaceState(null, null, window.location.pathname + window.location.search + hash);
       }, 0);
     }
     
     // Mark that the page has loaded, future hash navigation should work normally
-    sessionStorage.setItem('allowHashScroll', 'true');
+    window.sessionStorage.setItem('allowHashScroll', 'true');
   }
 
   // Initialize all features when DOM is ready
