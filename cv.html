@@ -44,19 +44,19 @@
       </label>
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
         </li>
         <li class="nav-item">
-          <a href="index.html#projects" class="nav-link">Projects</a>
+          <a href="index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a href="cv.html" class="nav-link">CV</a>
+          <a href="cv.html" class="nav-link" data-i18n="nav.cv">CV</a>
         </li>
         <li class="nav-item">
-          <a href="about.html" class="nav-link">About Me</a>
+          <a href="about.html" class="nav-link" data-i18n="nav.about">About Me</a>
         </li>
         <li class="nav-item">
-          <a href="index.html#contact" class="nav-link">Contact</a>
+          <a href="index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
         </li>
       </ul>
     </div>
@@ -357,12 +357,12 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>Contact</h3>
+        <h3 data-i18n="footer.contactTitle">Contact</h3>
         <p>1020 Vienna, Austria</p>
         <p><a href="mailto:valentinogsusini@gmail.com">valentinogsusini@gmail.com</a></p>
       </div>
       <div class="footer-section">
-        <h3>Connect</h3>
+        <h3 data-i18n="footer.connectTitle">Connect</h3>
         <div class="social-links">
           <a href="https://github.com/ValGSgit" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg class="icon" viewBox="0 0 16 16" width="24" height="24">
@@ -377,23 +377,25 @@
         </div>
       </div>
       <div class="footer-section">
-        <h3>Quick Links</h3>
+        <h3 data-i18n="footer.quickLinksTitle">Quick Links</h3>
         <ul>
-          <li><a href="cv.html">View CV</a></li>
-          <li><a href="index.html#projects">Projects</a></li>
-          <li><a href="about.html">About Me</a></li>
+          <li><a href="cv.html" data-i18n="footer.viewCV">View CV</a></li>
+          <li><a href="index.html#projects" data-i18n="footer.projects">Projects</a></li>
+          <li><a href="about.html" data-i18n="footer.aboutMe">About Me</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Valentino Garcia Susini. All rights reserved.</p>
-      <p class="footer-note">Static site hosted on GitHub Pages</p>
+      <p data-i18n="footer.copyright">2025 Valentino Garcia Susini. All rights reserved.</p>
+      <p class="footer-note" data-i18n="footer.hostedNote">Static site hosted on GitHub Pages</p>
     </div>
   </div>
 </footer>
 
   
   <!-- Scripts -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/language-switcher.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
