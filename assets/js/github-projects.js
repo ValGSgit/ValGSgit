@@ -83,10 +83,10 @@
     
     // Map repo names to showcase page URLs
     const showcasePages = {
-      '42CC': 'projects/42cc.html',
-      'Minishell': 'projects/minishell.html',
-      'webserv': 'projects/webserv.html',
-      'PISSM': 'projects/pissm.html'
+      '42CC': 'projects/42cc/',
+      'Minishell': 'projects/minishell/',
+      'webserv': 'projects/webserv/',
+      'PISSM': 'projects/pissm/'
     };
     
     const showcaseUrl = showcasePages[project.name];
