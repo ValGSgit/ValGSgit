@@ -1,0 +1,59 @@
+# Site settings
+title: Valentino Giusti Susini - Software Developer
+email: entinosusini@gmail.com
+description: >-
+  Professional portfolio showcasing software development skills, projects, and experience.
+  Aspiring software developer with expertise in C/C++, Python, and system programming.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://valgsit.github.io" # the base hostname & protocol for your site
+
+# Personal information
+author:
+  name: Valentino Giusti Susini
+  title: Software Developer
+  location: Vienna, Austria
+  github: ValGSgit
+  linkedin: valentinogs
+  email: entinosusini@gmail.com
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Exclude from processing
+exclude:
+  - .git
+  - .github
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Projects
+    url: /#projects
+  - title: CV
+    url: /cv
+  - title: About Me
+    url: /about
+  - title: Contact
+    url: /#contact
+
+# GitHub API settings
+github_username: ValGSgit
+show_downloads: false

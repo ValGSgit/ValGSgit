@@ -1,0 +1,41 @@
+<div class="project-card">
+  <div class="project-header">
+    <h3 class="project-title">
+      <a href="{{ include.project.html_url }}" target="_blank" rel="noopener noreferrer">
+        {{ include.project.name }}
+      </a>
+    </h3>
+    <div class="project-stats">
+      <span class="stars" title="Stars">
+        ⭐ {{ include.project.stargazers_count }}
+      </span>
+      <span class="forks" title="Forks">
+        🍴 {{ include.project.forks_count }}
+      </span>
+    </div>
+  </div>
+  <p class="project-description">
+    {{ include.project.description | default: "No description available" }}
+  </p>
+  <div class="project-meta">
+    {% if include.project.language %}
+    <span class="language">
+      <span class="language-dot" style="background-color: {{ include.project.language_color | default: '#555' }}"></span>
+      {{ include.project.language }}
+    </span>
+    {% endif %}
+    <span class="updated">
+      Updated {{ include.project.updated_at | date: "%b %Y" }}
+    </span>
+  </div>
+  <div class="project-links">
+    <a href="{{ include.project.html_url }}" class="btn btn-small" target="_blank" rel="noopener noreferrer">
+      View Repository
+    </a>
+    {% if include.project.homepage %}
+    <a href="{{ include.project.homepage }}" class="btn btn-small btn-secondary" target="_blank" rel="noopener noreferrer">
+      Live Demo
+    </a>
+    {% endif %}
+  </div>
+</div>
