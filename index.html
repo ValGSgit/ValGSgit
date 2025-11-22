@@ -1,0 +1,213 @@
+---
+layout: default
+title: Home
+load_github_projects: true
+body_class: home-page
+---
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Hi, I'm <span class="highlight">Valentino Giusti Susini</span></h1>
+        <h2 class="hero-subtitle">Software Developer</h2>
+        <p class="hero-description">
+          Aspiring software developer passionate about creating innovative solutions and tackling complex challenges.
+          Currently mastering system programming and algorithms at 42 School (Circle 5/7) in Vienna, Austria.
+        </p>
+        <div class="hero-cta">
+          <a href="/cv" class="btn btn-primary">View My CV</a>
+          <a href="#projects" class="btn btn-secondary">See Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-wrapper">
+          <div class="profile-placeholder">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="card-icon">🎯</div>
+          <h3>Adaptability</h3>
+          <p>Thriving in new environments and embracing change. Five years ago, I made the bold decision to move from Argentina to Vienna, Austria.</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">🔧</div>
+          <h3>Problem Solving</h3>
+          <p>Breaking down complex challenges into manageable solutions through persistence and creative thinking.</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">💪</div>
+          <h3>Stress Management</h3>
+          <p>Performing my best under pressure, honed through intensive programming challenges.</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">🎓</div>
+          <h3>Continuous Learning</h3>
+          <p>Always eager to expand my technical horizons and master new technologies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack Section -->
+<section class="tech-stack">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="tech-grid">
+      <div class="tech-category">
+        <h3>Programming Languages</h3>
+        <div class="tech-items">
+          <span class="tech-tag">C/C++</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Shell Scripting</span>
+          <span class="tech-tag">Fortran</span>
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">SQL/MySQL</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <h3>Tools & Technologies</h3>
+        <div class="tech-items">
+          <span class="tech-tag">Git & GitHub</span>
+          <span class="tech-tag">Linux/Unix</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Makefile</span>
+          <span class="tech-tag">Debugging Tools</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <h3>Currently Learning</h3>
+        <div class="tech-items">
+          <span class="tech-tag learning">Web Development</span>
+          <span class="tech-tag learning">Database Management</span>
+          <span class="tech-tag learning">System Architecture</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-description">Showcasing my GitHub repositories and technical work</p>
+    
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="C">C/C++</button>
+      <button class="filter-btn" data-filter="Python">Python</button>
+      <button class="filter-btn" data-filter="Shell">Shell</button>
+    </div>
+    
+    <div id="projects-container" class="projects-grid">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Loading projects from GitHub...</p>
+      </div>
+    </div>
+    
+    <div class="projects-footer">
+      <a href="https://github.com/ValGSgit?tab=repositories" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+        View All Repositories on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 42 School Highlights -->
+<section class="achievements">
+  <div class="container">
+    <h2 class="section-title">42 School Highlights</h2>
+    <div class="achievement-grid">
+      <div class="achievement-card">
+        <div class="achievement-number">5/7</div>
+        <div class="achievement-label">Current Circle</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon">🖥️</div>
+        <div class="achievement-label">System Programming</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon">🧮</div>
+        <div class="achievement-label">Algorithms</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon">🐧</div>
+        <div class="achievement-label">Unix Systems</div>
+      </div>
+    </div>
+    <div class="contribution-graph">
+      <h3>GitHub Contribution Activity</h3>
+      <img src="https://raw.githubusercontent.com/ValGSgit/ValGSgit/main/profile-3d-contrib/profile-night-green.svg" alt="3D Contribution Graph" class="contrib-3d" />
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title">Let's Connect!</h2>
+    <p class="section-description">I'm always open to discussing new opportunities, collaborating on interesting projects, or simply connecting with fellow developers.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📧</div>
+        <h3>Email</h3>
+        <a href="mailto:entinosusini@gmail.com">entinosusini@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">💼</div>
+        <h3>LinkedIn</h3>
+        <a href="https://linkedin.com/in/valentinogs" target="_blank" rel="noopener noreferrer">linkedin.com/in/valentinogs</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🐙</div>
+        <h3>GitHub</h3>
+        <a href="https://github.com/ValGSgit" target="_blank" rel="noopener noreferrer">github.com/ValGSgit</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h3>Location</h3>
+        <p>Vienna, Austria</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Current Focus Banner -->
+<section class="focus-banner">
+  <div class="container">
+    <h3>🎯 Current Focus</h3>
+    <div class="focus-items">
+      <div class="focus-item">
+        <strong>🔥 Finishing 42 School Curriculum</strong>
+        <span>Currently at Circle 5</span>
+      </div>
+      <div class="focus-item">
+        <strong>💼 Seeking Entry-Level Software Developer Opportunities</strong>
+        <span>Ready to contribute and grow</span>
+      </div>
+      <div class="focus-item">
+        <strong>🌱 Expanding Full-Stack Development Skills</strong>
+        <span>Web Development & System Architecture</span>
+      </div>
+    </div>
+  </div>
+</section>
