@@ -142,7 +142,7 @@
     // The browser naturally scrolls to hash fragments, but we want to start at the top
     
     // If there's a hash in the URL and we just loaded the page
-    if (window.location.hash && !window.sessionStorage.getItem('allowHashScroll')) {
+    if (window.location.hash && !window.sessionStorage.getItem('vgs_initial_load_complete')) {
       // Temporarily remove the hash to prevent browser scroll
       const hash = window.location.hash;
       // Use current pathname and search to maintain URL structure
@@ -155,7 +155,7 @@
     }
     
     // Mark that the page has loaded, future hash navigation should work normally
-    window.sessionStorage.setItem('allowHashScroll', 'true');
+    window.sessionStorage.setItem('vgs_initial_load_complete', 'true');
   }
 
   // Initialize all features when DOM is ready
