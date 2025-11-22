@@ -1,4 +1,4 @@
-name: Deploy Jekyll site to Pages
+name: Deploy Static Site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -21,37 +21,33 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
-      - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
-      - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v3
-
-  # Deployment job
+  # Deploy job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Create deployment directory
+        run: |
+          mkdir -p _deploy
+          # Copy only the files we want to deploy (exclude Jekyll structure)
+          cp -r assets _deploy/
+          cp -r profile-3d-contrib _deploy/ || true
+          cp index.html _deploy/
+          cp about.html _deploy/
+          cp cv.html _deploy/
+          cp .nojekyll _deploy/
+          # Copy any other HTML files in root
+          find . -maxdepth 1 -name "*.html" -not -name "index.html" -not -name "about.html" -not -name "cv.html" -exec cp {} _deploy/ \;
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_deploy'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
