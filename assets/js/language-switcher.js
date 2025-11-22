@@ -17,6 +17,18 @@
 
   // Get translation for a key path (e.g., 'nav.home')
   function getTranslation(keyPath, lang = currentLanguage) {
+    // Check if translations object exists
+    if (typeof translations === 'undefined' || !translations) {
+      console.warn('Translations not loaded yet');
+      return null; // Return null instead of key to prevent replacing content
+    }
+    
+    // Check if language exists in translations
+    if (!translations[lang]) {
+      console.warn(`Language '${lang}' not found in translations, falling back to English`);
+      lang = DEFAULT_LANGUAGE;
+    }
+    
     const keys = keyPath.split('.');
     let value = translations[lang];
     
@@ -24,11 +36,11 @@
       if (value && typeof value === 'object') {
         value = value[key];
       } else {
-        return keyPath; // Return key if translation not found
+        return null; // Return null if translation not found to keep original content
       }
     }
     
-    return value || keyPath;
+    return value || null;
   }
 
   // Update all elements with data-i18n attribute
@@ -37,7 +49,8 @@
       const key = element.getAttribute('data-i18n');
       const translation = getTranslation(key);
       
-      if (translation) {
+      // Only update if we have a valid translation (not null)
+      if (translation !== null && translation !== undefined) {
         element.textContent = translation;
       }
     });
@@ -132,17 +145,37 @@
 
   // Set language and update page
   function setLanguage(lang) {
+    if (typeof translations === 'undefined' || !translations) {
+      console.error('Translations not loaded');
+      return;
+    }
+    
     if (translations[lang]) {
       currentLanguage = lang;
       saveLanguage(lang);
       updatePageContent();
+    } else {
+      console.warn(`Language '${lang}' not available`);
     }
   }
 
   // Initialize language system
   function init() {
+    // Check if translations are loaded
+    if (typeof translations === 'undefined' || !translations) {
+      console.error('Translations not loaded. Make sure translations.js is loaded before language-switcher.js');
+      return;
+    }
+    
     // Get stored language or default
     currentLanguage = getStoredLanguage();
+    
+    // Validate stored language exists in translations
+    if (!translations[currentLanguage]) {
+      console.warn(`Stored language '${currentLanguage}' not found, using default`);
+      currentLanguage = DEFAULT_LANGUAGE;
+      saveLanguage(currentLanguage);
+    }
     
     // Create language selector
     createLanguageSelector();
