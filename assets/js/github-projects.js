@@ -81,6 +81,16 @@
       year: 'numeric' 
     });
     
+    // Map repo names to showcase page URLs
+    const showcasePages = {
+      '42CC': 'projects/42cc.html',
+      'Minishell': 'projects/minishell.html',
+      'webserv': 'projects/webserv.html',
+      'PISSM': 'projects/pissm.html'
+    };
+    
+    const showcaseUrl = showcasePages[project.name];
+    
     return `
       <div class="project-card" data-language="${project.language || 'Other'}">
         <div class="project-header">
@@ -113,7 +123,12 @@
           </span>
         </div>
         <div class="project-links">
-          <a href="${project.html_url}" class="btn btn-small" target="_blank" rel="noopener noreferrer">
+          ${showcaseUrl ? `
+            <a href="${showcaseUrl}" class="btn btn-small">
+              📖 View Details
+            </a>
+          ` : ''}
+          <a href="${project.html_url}" class="btn btn-small ${showcaseUrl ? 'btn-secondary' : ''}" target="_blank" rel="noopener noreferrer">
             View Repository
           </a>
           ${project.homepage ? `
