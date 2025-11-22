@@ -136,6 +136,25 @@
     });
   }
 
+  // Handle hash navigation on page load
+  function initHashNavigation() {
+    // Check if there's a hash in the URL when the page loads
+    if (window.location.hash) {
+      const hash = window.location.hash;
+      const target = document.querySelector(hash);
+      
+      if (target) {
+        // Wait for page to fully load before scrolling
+        setTimeout(() => {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 100);
+      }
+    }
+  }
+
   // Initialize all features when DOM is ready
   function init() {
     initSmoothScroll();
@@ -143,6 +162,7 @@
     initScrollSpy();
     initScrollAnimations();
     initHeaderScroll();
+    initHashNavigation();
     
     // Add loaded class to body for CSS transitions
     document.body.classList.add('loaded');
