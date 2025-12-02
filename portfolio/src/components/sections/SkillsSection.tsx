@@ -13,7 +13,7 @@ const categories = [
 ];
 
 const getLevelColor = (level: number) => {
-  if (level >= 90) return "from-blue-500 to-cyan-400";
+  if (level >= 90) return "from-emerald-500 to-cyan-400";
   if (level >= 80) return "from-green-500 to-emerald-400";
   if (level >= 70) return "from-yellow-500 to-amber-400";
   return "from-orange-500 to-red-400";
@@ -22,13 +22,13 @@ const getLevelColor = (level: number) => {
 const getLevelLabel = (category: string) => {
   switch (category) {
     case "expert":
-      return { label: "Expert", color: "bg-blue-500/20 text-blue-400" };
+      return { label: "Expert", color: "bg-emerald-500/20 text-emerald-400" };
     case "proficient":
       return { label: "Proficient", color: "bg-green-500/20 text-green-400" };
     case "intermediate":
       return { label: "Intermediate", color: "bg-yellow-500/20 text-yellow-400" };
     default:
-      return { label: "Learning", color: "bg-purple-500/20 text-purple-400" };
+      return { label: "Learning", color: "bg-cyan-500/20 text-cyan-400" };
   }
 };
 
@@ -41,10 +41,10 @@ export default function SkillsSection() {
     <section
       ref={containerRef}
       id="skills"
-      className="relative py-24 bg-gray-900"
+      className="relative py-24 bg-zinc-900"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-cyan-900/10 via-transparent to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -55,10 +55,10 @@ export default function SkillsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Technical <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Skills</span>
+            Technical <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">Skills</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6" />
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto rounded-full mb-6" />
+          <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
             A comprehensive toolkit built through hands-on experience and continuous learning
           </p>
         </motion.div>
@@ -76,8 +76,8 @@ export default function SkillsSection() {
               onClick={() => setActiveCategory(cat.id)}
               className={`flex items-center gap-2 px-5 py-3 rounded-xl font-medium transition-all duration-300 ${
                 activeCategory === cat.id
-                  ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/25"
-                  : "bg-gray-800 text-gray-400 hover:bg-gray-750 hover:text-white"
+                  ? "bg-gradient-to-r from-emerald-500 to-cyan-600 text-white shadow-lg shadow-emerald-500/25"
+                  : "bg-zinc-800 text-zinc-400 hover:bg-gray-750 hover:text-white"
               }`}
             >
               <cat.icon className="w-5 h-5" />
@@ -105,7 +105,7 @@ export default function SkillsSection() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.05 }}
-                      className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50"
+                      className="bg-zinc-800/50 backdrop-blur-sm p-6 rounded-xl border border-zinc-700/50"
                     >
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-3">
@@ -114,9 +114,9 @@ export default function SkillsSection() {
                             {levelInfo.label}
                           </span>
                         </div>
-                        <span className="text-sm text-gray-400">{skill.level}%</span>
+                        <span className="text-sm text-zinc-400">{skill.level}%</span>
                       </div>
-                      <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
+                      <div className="h-2 bg-zinc-700 rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={isInView ? { width: `${skill.level}%` } : {}}
@@ -147,10 +147,10 @@ export default function SkillsSection() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
                     whileHover={{ scale: 1.05, y: -5 }}
-                    className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/50 hover:border-purple-500/50 transition-all cursor-default text-center"
+                    className="bg-zinc-800/50 backdrop-blur-sm p-4 rounded-xl border border-zinc-700/50 hover:border-cyan-500/50 transition-all cursor-default text-center"
                   >
-                    <Terminal className="w-6 h-6 text-purple-400 mx-auto mb-2" />
-                    <span className="text-sm text-gray-300">{tool}</span>
+                    <Terminal className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
+                    <span className="text-sm text-zinc-300">{tool}</span>
                   </motion.div>
                 ))}
               </div>
@@ -173,10 +173,10 @@ export default function SkillsSection() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
                     whileHover={{ scale: 1.05, y: -5 }}
-                    className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/50 hover:border-blue-500/50 transition-all cursor-default text-center"
+                    className="bg-zinc-800/50 backdrop-blur-sm p-4 rounded-xl border border-zinc-700/50 hover:border-emerald-500/50 transition-all cursor-default text-center"
                   >
-                    <Globe className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-                    <span className="text-sm text-gray-300">{skill}</span>
+                    <Globe className="w-6 h-6 text-emerald-400 mx-auto mb-2" />
+                    <span className="text-sm text-zinc-300">{skill}</span>
                   </motion.div>
                 ))}
               </div>
@@ -199,10 +199,10 @@ export default function SkillsSection() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
                     whileHover={{ scale: 1.05, y: -5 }}
-                    className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/50 hover:border-green-500/50 transition-all cursor-default text-center"
+                    className="bg-zinc-800/50 backdrop-blur-sm p-4 rounded-xl border border-zinc-700/50 hover:border-green-500/50 transition-all cursor-default text-center"
                   >
                     <Cpu className="w-6 h-6 text-green-400 mx-auto mb-2" />
-                    <span className="text-sm text-gray-300">{skill}</span>
+                    <span className="text-sm text-zinc-300">{skill}</span>
                   </motion.div>
                 ))}
               </div>
@@ -218,20 +218,20 @@ export default function SkillsSection() {
           className="mt-12 flex flex-wrap justify-center gap-6"
         >
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-blue-500" />
-            <span className="text-sm text-gray-400">Expert (90%+)</span>
+            <div className="w-3 h-3 rounded-full bg-emerald-500" />
+            <span className="text-sm text-zinc-400">Expert (90%+)</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-green-500" />
-            <span className="text-sm text-gray-400">Proficient (80%+)</span>
+            <span className="text-sm text-zinc-400">Proficient (80%+)</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-yellow-500" />
-            <span className="text-sm text-gray-400">Intermediate (70%+)</span>
+            <span className="text-sm text-zinc-400">Intermediate (70%+)</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-orange-500" />
-            <span className="text-sm text-gray-400">Learning</span>
+            <span className="text-sm text-zinc-400">Learning</span>
           </div>
         </motion.div>
       </div>

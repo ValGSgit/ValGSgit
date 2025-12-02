@@ -1,22 +1,35 @@
 "use client";
 
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
 
+// Detect device capabilities for particle count
+const getParticleCount = () => {
+  if (typeof window === 'undefined') return 2000;
+  // Check for mobile/low-end devices
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  const hasLowMemory = 'deviceMemory' in navigator && (navigator as Navigator & { deviceMemory?: number }).deviceMemory !== undefined && (navigator as Navigator & { deviceMemory?: number }).deviceMemory! < 4;
+  
+  if (isMobile || hasLowMemory) return 1500;
+  return 3000;
+};
+
 function ParticleField() {
   const ref = useRef<THREE.Points>(null);
+  const [particleCount] = useState(getParticleCount);
   
   const particlesPosition = useMemo(() => {
-    const positions = new Float32Array(5000 * 3);
-    for (let i = 0; i < 5000; i++) {
+    const count = particleCount;
+    const positions = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
       positions[i * 3] = (Math.random() - 0.5) * 10;
       positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
       positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
     }
     return positions;
-  }, []);
+  }, [particleCount]);
 
   useFrame((state) => {
     if (ref.current) {
@@ -29,7 +42,7 @@ function ParticleField() {
     <Points ref={ref} positions={particlesPosition} stride={3} frustumCulled={false}>
       <PointMaterial
         transparent
-        color="#3b82f6"
+        color="#10b981"
         size={0.015}
         sizeAttenuation={true}
         depthWrite={false}
@@ -71,7 +84,7 @@ function FloatingGeometry() {
       <mesh ref={meshRef} position={[2, 0, -2]}>
         <icosahedronGeometry args={[0.5, 1]} />
         <meshStandardMaterial
-          color="#8b5cf6"
+          color="#06b6d4"
           wireframe
           transparent
           opacity={0.6}
@@ -81,7 +94,7 @@ function FloatingGeometry() {
       <mesh ref={torusRef} position={[-2.5, 1, -3]}>
         <torusGeometry args={[0.4, 0.15, 16, 32]} />
         <meshStandardMaterial
-          color="#3b82f6"
+          color="#10b981"
           wireframe
           transparent
           opacity={0.5}
@@ -91,7 +104,7 @@ function FloatingGeometry() {
       <mesh ref={octaRef} position={[3, -1, -4]}>
         <octahedronGeometry args={[0.4, 0]} />
         <meshStandardMaterial
-          color="#10b981"
+          color="#f59e0b"
           wireframe
           transparent
           opacity={0.5}

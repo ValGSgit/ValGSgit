@@ -164,18 +164,34 @@ export default function AIChatbot() {
     }, 100);
   };
 
-  // Format message content (basic markdown support)
-  const formatMessage = (content: string) => {
-    return content.split('\n').map((line, i) => {
-      // Bold text
-      const formattedLine = line.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-blue-400">$1</strong>');
-      return (
-        <span key={i} dangerouslySetInnerHTML={{ __html: formattedLine }} />
-      );
-    }).reduce<React.ReactNode[]>((acc, line, i) => {
-      if (i === 0) return [line];
-      return [...acc, <br key={`br-${i}`} />, line];
-    }, []);
+  // Format message content (basic markdown support) - safe approach
+  const formatMessage = (content: string): React.ReactNode[] => {
+    const lines = content.split('\n');
+    const result: React.ReactNode[] = [];
+    
+    lines.forEach((line, lineIndex) => {
+      if (lineIndex > 0) {
+        result.push(<br key={`br-${lineIndex}`} />);
+      }
+      
+      // Parse bold text safely using regex split
+      const parts = line.split(/(\*\*.*?\*\*)/g);
+      const lineElements = parts.map((part, partIndex) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+          const boldText = part.slice(2, -2);
+          return (
+            <strong key={`${lineIndex}-${partIndex}`} className="font-semibold text-emerald-400">
+              {boldText}
+            </strong>
+          );
+        }
+        return <span key={`${lineIndex}-${partIndex}`}>{part}</span>;
+      });
+      
+      result.push(<span key={`line-${lineIndex}`}>{lineElements}</span>);
+    });
+    
+    return result;
   };
 
   return (
@@ -183,7 +199,7 @@ export default function AIChatbot() {
       {/* Chat Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-emerald-500 to-cyan-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Toggle AI Assistant"
@@ -221,10 +237,10 @@ export default function AIChatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-24 right-6 z-50 w-[380px] max-h-[600px] bg-gray-900/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-700/50 flex flex-col overflow-hidden"
+            className="fixed bottom-24 right-6 z-50 w-[380px] max-h-[600px] bg-zinc-900/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zinc-700/50 flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="p-4 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center gap-3">
+            <div className="p-4 bg-gradient-to-r from-emerald-600 to-cyan-600 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                 <Bot className="w-6 h-6 text-white" />
               </div>
@@ -246,8 +262,8 @@ export default function AIChatbot() {
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
                       message.role === "user"
-                        ? "bg-blue-500"
-                        : "bg-gradient-to-br from-purple-500 to-blue-500"
+                        ? "bg-emerald-500"
+                        : "bg-gradient-to-br from-cyan-500 to-emerald-500"
                     }`}
                   >
                     {message.role === "user" ? (
@@ -259,8 +275,8 @@ export default function AIChatbot() {
                   <div
                     className={`max-w-[80%] p-3 rounded-2xl text-sm ${
                       message.role === "user"
-                        ? "bg-blue-500 text-white rounded-tr-sm"
-                        : "bg-gray-800 text-gray-100 rounded-tl-sm"
+                        ? "bg-emerald-500 text-white rounded-tr-sm"
+                        : "bg-zinc-800 text-zinc-100 rounded-tl-sm"
                     }`}
                   >
                     {formatMessage(message.content)}
@@ -274,11 +290,11 @@ export default function AIChatbot() {
                   animate={{ opacity: 1 }}
                   className="flex gap-3"
                 >
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-emerald-500 flex items-center justify-center">
                     <Bot className="w-4 h-4 text-white" />
                   </div>
-                  <div className="bg-gray-800 p-3 rounded-2xl rounded-tl-sm">
-                    <Loader2 className="w-5 h-5 text-blue-400 animate-spin" />
+                  <div className="bg-zinc-800 p-3 rounded-2xl rounded-tl-sm">
+                    <Loader2 className="w-5 h-5 text-emerald-400 animate-spin" />
                   </div>
                 </motion.div>
               )}
@@ -289,13 +305,13 @@ export default function AIChatbot() {
             {/* Suggested Questions */}
             {messages.length <= 2 && (
               <div className="px-4 pb-2">
-                <p className="text-xs text-gray-500 mb-2">Suggested questions:</p>
+                <p className="text-xs text-zinc-500 mb-2">Suggested questions:</p>
                 <div className="flex flex-wrap gap-2">
                   {suggestedQuestions.slice(0, 3).map((question, i) => (
                     <button
                       key={i}
                       onClick={() => handleSuggestedQuestion(question)}
-                      className="text-xs px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-full transition-colors"
+                      className="text-xs px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded-full transition-colors"
                     >
                       {question}
                     </button>
@@ -305,7 +321,7 @@ export default function AIChatbot() {
             )}
 
             {/* Input */}
-            <div className="p-4 border-t border-gray-700/50">
+            <div className="p-4 border-t border-zinc-700/50">
               <div className="flex gap-2">
                 <input
                   ref={inputRef}
@@ -314,12 +330,12 @@ export default function AIChatbot() {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyPress}
                   placeholder="Ask about skills, projects, experience..."
-                  className="flex-1 bg-gray-800 text-white text-sm px-4 py-2.5 rounded-xl border border-gray-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder-gray-500"
+                  className="flex-1 bg-zinc-800 text-white text-sm px-4 py-2.5 rounded-xl border border-zinc-700 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 placeholder-zinc-500"
                 />
                 <button
                   onClick={handleSend}
                   disabled={!input.trim() || isTyping}
-                  className="p-2.5 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-700 disabled:cursor-not-allowed rounded-xl transition-colors"
+                  className="p-2.5 bg-emerald-500 hover:bg-emerald-600 disabled:bg-zinc-700 disabled:cursor-not-allowed rounded-xl transition-colors"
                 >
                   <Send className="w-5 h-5 text-white" />
                 </button>

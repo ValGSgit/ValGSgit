@@ -58,7 +58,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans antialiased bg-gray-950 text-white">
+      <body className="font-sans antialiased bg-zinc-950 text-zinc-100">
         {children}
         <Analytics />
       </body>

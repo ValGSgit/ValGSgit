@@ -17,7 +17,7 @@ const AIChatbot = dynamic(() => import("@/components/ui/AIChatbot"), {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-950">
+    <main className="min-h-screen bg-zinc-950">
       <Navbar />
       <HeroSection />
       <AboutSection />

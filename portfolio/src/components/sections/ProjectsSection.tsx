@@ -27,10 +27,10 @@ export default function ProjectsSection() {
     <section
       ref={containerRef}
       id="projects"
-      className="relative py-24 bg-gray-950"
+      className="relative py-24 bg-zinc-950"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-900/10 via-transparent to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -41,10 +41,10 @@ export default function ProjectsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Featured <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Projects</span>
+            Featured <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6" />
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto rounded-full mb-6" />
+          <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
             A showcase of my technical work, from system programming to web development
           </p>
         </motion.div>
@@ -60,8 +60,8 @@ export default function ProjectsSection() {
             onClick={() => setFilter(null)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
               filter === null
-                ? "bg-blue-500 text-white"
-                : "bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white"
+                ? "bg-emerald-500 text-white"
+                : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-white"
             }`}
           >
             <Filter className="w-4 h-4" />
@@ -73,8 +73,8 @@ export default function ProjectsSection() {
               onClick={() => setFilter(tech)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                 filter === tech
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white"
+                  ? "bg-emerald-500 text-white"
+                  : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-white"
               }`}
             >
               {tech}
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className={`group relative bg-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-800 overflow-hidden hover:border-blue-500/50 transition-all duration-300 ${
+                className={`group relative bg-zinc-900/80 backdrop-blur-sm rounded-2xl border border-zinc-800 overflow-hidden hover:border-emerald-500/50 transition-all duration-300 ${
                   project.featured ? "md:col-span-2 lg:col-span-1" : ""
                 }`}
               >
@@ -115,11 +115,11 @@ export default function ProjectsSection() {
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-600 flex items-center justify-center">
                         <Code className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
                           {project.name}
                         </h3>
                       </div>
@@ -127,7 +127,7 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-zinc-400 text-sm leading-relaxed mb-4 line-clamp-3">
                     {project.description}
                   </p>
 
@@ -136,7 +136,7 @@ export default function ProjectsSection() {
                     <div className="mb-4">
                       <ul className="space-y-1">
                         {project.highlights.slice(0, 3).map((highlight, i) => (
-                          <li key={i} className="flex items-center gap-2 text-xs text-gray-500">
+                          <li key={i} className="flex items-center gap-2 text-xs text-zinc-500">
                             <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
                             {highlight}
                           </li>
@@ -150,7 +150,7 @@ export default function ProjectsSection() {
                     {project.technologies.slice(0, 5).map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-xs font-medium bg-gray-800 text-gray-300 rounded-full hover:bg-blue-500/20 hover:text-blue-400 transition-colors cursor-default"
+                        className="px-3 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded-full hover:bg-emerald-500/20 hover:text-emerald-400 transition-colors cursor-default"
                       >
                         {tech}
                       </span>
@@ -158,8 +158,8 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* Footer */}
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-800">
-                    <div className="flex items-center gap-4 text-gray-500 text-sm">
+                  <div className="flex items-center justify-between pt-4 border-t border-zinc-800">
+                    <div className="flex items-center gap-4 text-zinc-500 text-sm">
                       <span className="flex items-center gap-1">
                         <Star className="w-4 h-4" />
                         42 Project
@@ -171,7 +171,7 @@ export default function ProjectsSection() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-all"
+                        className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-all"
                         aria-label={`View ${project.name} on GitHub`}
                       >
                         <Github className="w-5 h-5" />
@@ -181,7 +181,7 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Hover Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
               </motion.article>
             ))}
           </AnimatePresence>
@@ -197,7 +197,7 @@ export default function ProjectsSection() {
           >
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-xl transition-all"
+              className="px-8 py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-medium rounded-xl transition-all"
             >
               {showAll ? "Show Less" : `Show All (${filteredProjects.length})`}
             </button>
@@ -215,7 +215,7 @@ export default function ProjectsSection() {
             href="https://github.com/ValGSgit?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-700 hover:from-gray-700 hover:to-gray-600 text-white font-medium rounded-xl transition-all group"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zinc-800 to-zinc-700 hover:from-zinc-700 hover:to-zinc-600 text-white font-medium rounded-xl transition-all group"
           >
             <Github className="w-5 h-5" />
             View All Repositories on GitHub

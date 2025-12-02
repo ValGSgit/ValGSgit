@@ -56,7 +56,7 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-gray-900/95 backdrop-blur-lg shadow-lg border-b border-gray-800"
+          ? "bg-zinc-900/95 backdrop-blur-lg shadow-lg border-b border-zinc-800"
           : "bg-transparent"
       }`}
     >
@@ -70,11 +70,11 @@ export default function Navbar() {
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+              className="text-xl md:text-2xl font-bold bg-gradient-to-r from-emerald-400 via-cyan-500 to-pink-500 bg-clip-text text-transparent"
             >
               VGS
             </motion.div>
-            <span className="hidden sm:block text-gray-400 text-sm">
+            <span className="hidden sm:block text-zinc-400 text-sm">
               Valentino Garcia Susini
             </span>
           </Link>
@@ -87,15 +87,15 @@ export default function Navbar() {
                 onClick={() => handleNavClick(item.href)}
                 className={`relative px-4 py-2 text-sm font-medium transition-colors ${
                   activeSection === item.href.replace("#", "")
-                    ? "text-blue-400"
-                    : "text-gray-300 hover:text-white"
+                    ? "text-emerald-400"
+                    : "text-zinc-300 hover:text-white"
                 }`}
               >
                 {item.name}
                 {activeSection === item.href.replace("#", "") && (
                   <motion.div
                     layoutId="activeSection"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-400 to-cyan-500"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -110,7 +110,7 @@ export default function Navbar() {
                 href="https://github.com/ValGSgit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
@@ -119,14 +119,14 @@ export default function Navbar() {
                 href="https://linkedin.com/in/valentinogs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="mailto:valentinogsusini@gmail.com"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5" />
@@ -136,7 +136,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 text-gray-400 hover:text-white"
+              className="md:hidden p-2 text-zinc-400 hover:text-white"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -153,7 +153,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-gray-900/98 backdrop-blur-lg border-b border-gray-800"
+            className="md:hidden bg-zinc-900/98 backdrop-blur-lg border-b border-zinc-800"
           >
             <div className="px-4 py-4 space-y-2">
               {navItems.map((item, index) => (
@@ -165,20 +165,20 @@ export default function Navbar() {
                   onClick={() => handleNavClick(item.href)}
                   className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                     activeSection === item.href.replace("#", "")
-                      ? "bg-blue-500/20 text-blue-400"
-                      : "text-gray-300 hover:bg-gray-800"
+                      ? "bg-emerald-500/20 text-emerald-400"
+                      : "text-zinc-300 hover:bg-zinc-800"
                   }`}
                 >
                   {item.name}
                 </motion.button>
               ))}
               
-              <div className="flex items-center gap-4 pt-4 px-4 border-t border-gray-800">
+              <div className="flex items-center gap-4 pt-4 px-4 border-t border-zinc-800">
                 <a
                   href="https://github.com/ValGSgit"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-zinc-400 hover:text-white transition-colors"
                 >
                   <Github className="w-5 h-5" />
                 </a>
@@ -186,13 +186,13 @@ export default function Navbar() {
                   href="https://linkedin.com/in/valentinogs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-zinc-400 hover:text-white transition-colors"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
                   href="mailto:valentinogsusini@gmail.com"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-zinc-400 hover:text-white transition-colors"
                 >
                   <Mail className="w-5 h-5" />
                 </a>

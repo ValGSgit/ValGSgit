@@ -45,8 +45,8 @@ const highlights = [
 ];
 
 const colorClasses = {
-  blue: "from-blue-500 to-blue-600",
-  purple: "from-purple-500 to-purple-600",
+  blue: "from-emerald-500 to-emerald-600",
+  purple: "from-cyan-500 to-cyan-600",
   green: "from-green-500 to-green-600",
   orange: "from-orange-500 to-orange-600",
   pink: "from-pink-500 to-pink-600",
@@ -76,10 +76,10 @@ export default function AboutSection() {
     <section
       ref={containerRef}
       id="about"
-      className="relative py-24 bg-gray-950"
+      className="relative py-24 bg-zinc-950"
     >
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/10 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,10 +91,10 @@ export default function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            About <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Me</span>
+            About <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">Me</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6" />
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto rounded-full mb-6" />
+          <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
             A dedicated developer with a passion for building robust systems and solving complex problems
           </p>
         </motion.div>
@@ -108,15 +108,15 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative"
           >
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-xl" />
-            <div className="relative bg-gray-900/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-800">
+            <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl blur-xl" />
+            <div className="relative bg-zinc-900/80 backdrop-blur-sm p-8 rounded-2xl border border-zinc-800">
               <h3 className="text-2xl font-bold text-white mb-6">My Journey</h3>
-              <div className="space-y-4 text-gray-300 leading-relaxed">
+              <div className="space-y-4 text-zinc-300 leading-relaxed">
                 <p>
-                  I&apos;m <span className="text-blue-400 font-semibold">{personalInfo.name}</span>, a dedicated full-stack software developer from Argentina, now building my career in Vienna, Austria.
+                  I&apos;m <span className="text-emerald-400 font-semibold">{personalInfo.name}</span>, a dedicated full-stack software developer from Argentina, now building my career in Vienna, Austria.
                 </p>
                 <p>
-                  Through the rigorous peer-to-peer learning methodology at <span className="text-purple-400 font-semibold">42 Vienna</span>, I&apos;ve developed strong programming skills across multiple domains—from low-level system programming to web development and graphics.
+                  Through the rigorous peer-to-peer learning methodology at <span className="text-cyan-400 font-semibold">42 Vienna</span>, I&apos;ve developed strong programming skills across multiple domains—from low-level system programming to web development and graphics.
                 </p>
                 <p>
                   My hands-on experience includes building HTTP servers from scratch, implementing custom shells with advanced features, and creating 3D graphics engines with OpenGL.
@@ -127,24 +127,24 @@ export default function AboutSection() {
               </div>
               
               {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-gray-800">
+              <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-zinc-800">
                 <div className="text-center">
-                  <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  <div className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
                     9+
                   </div>
-                  <div className="text-sm text-gray-500">Languages</div>
+                  <div className="text-sm text-zinc-500">Languages</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  <div className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
                     20+
                   </div>
-                  <div className="text-sm text-gray-500">Projects</div>
+                  <div className="text-sm text-zinc-500">Projects</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  <div className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
                     3
                   </div>
-                  <div className="text-sm text-gray-500">Spoken Languages</div>
+                  <div className="text-sm text-zinc-500">Spoken Languages</div>
                 </div>
               </div>
             </div>
@@ -162,13 +162,13 @@ export default function AboutSection() {
                 key={item.title}
                 variants={itemVariants}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="group relative bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-all duration-300"
+                className="group relative bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-all duration-300"
               >
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${colorClasses[item.color as keyof typeof colorClasses]} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
-                <p className="text-sm text-gray-400 leading-relaxed">{item.description}</p>
+                <p className="text-sm text-zinc-400 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -179,7 +179,7 @@ export default function AboutSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-blue-500/30"
+          className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 rounded-2xl p-8 border border-emerald-500/30"
         >
           <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
             🎯 Current Focus
@@ -189,21 +189,21 @@ export default function AboutSection() {
               <div className="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0" />
               <div>
                 <h4 className="font-semibold text-white">Completing 42 Curriculum</h4>
-                <p className="text-sm text-gray-400">Building expertise in full-stack development</p>
+                <p className="text-sm text-zinc-400">Building expertise in full-stack development</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
+              <div className="w-2 h-2 rounded-full bg-emerald-500 mt-2 flex-shrink-0" />
               <div>
                 <h4 className="font-semibold text-white">Seeking Opportunities</h4>
-                <p className="text-sm text-gray-400">Ready to contribute in a professional environment</p>
+                <p className="text-sm text-zinc-400">Ready to contribute in a professional environment</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 flex-shrink-0" />
+              <div className="w-2 h-2 rounded-full bg-cyan-500 mt-2 flex-shrink-0" />
               <div>
                 <h4 className="font-semibold text-white">Exploring New Tech</h4>
-                <p className="text-sm text-gray-400">Cybersecurity & emerging technologies</p>
+                <p className="text-sm text-zinc-400">Cybersecurity & emerging technologies</p>
               </div>
             </div>
           </div>
