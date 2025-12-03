@@ -26,9 +26,10 @@ Check out my professional portfolio at [valGSgit.github.io](https://valGSgit.git
 **Languages:**
 - C/C++
 - Python
+- JavaScript/TypeScript
 - Shell Scripting
 - Fortran
-- HTML
+- HTML/CSS
 - SQL/MySQL
 
 **Tools & Technologies:**
@@ -52,7 +53,7 @@ Check out my professional portfolio at [valGSgit.github.io](https://valGSgit.git
 
 ## 🎯 Current Focus
 
-🔥 **Finishing 42 School Curriculum** - Currently at Rank 5  
+🔥 **Finishing 42 School Curriculum** - Currently at Rank 6  
 💼 **Seeking Entry-Level Software Developer Opportunities**  
 🌱 **Expanding Full-Stack Development Skills**
 
@@ -61,7 +62,7 @@ From studying at Universidad de Palermo to mastering the rigorous 42 School curr
 
 ## 🏆 42 School Highlights
 
-- **Current Circle**: 5/7
+- **Current Level**: 5.88
 - **Focus Areas**: System programming, algorithms, Unix systems
 - **Key Skills Developed**: Peer-to-peer learning, collaborative problem-solving, self-directed learning
 
@@ -72,7 +73,7 @@ I'm always open to discussing new opportunities, collaborating on interesting pr
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/valentinogs)
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:entinosusini@gmail.com)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:valentinogsusini@gmail.com)
 
 </div>
 
