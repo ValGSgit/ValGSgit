@@ -49,12 +49,15 @@ $RECYCLE.BIN/
 *.sublime-project
 *.sublime-workspace
 
-# Node (if using npm for any tooling)
+# Node
 node_modules/
 npm-debug.log
 yarn-error.log
-package-lock.json
-yarn.lock
+
+# Next.js
+portfolio/.next/
+portfolio/out/
+portfolio/.vercel
 
 # Logs
 *.log
@@ -62,6 +65,7 @@ yarn.lock
 # Environment variables
 .env
 .env.local
+.env*.local
 
 # Backup files
 *.bak
@@ -71,3 +75,7 @@ yarn.lock
 # Temporary files
 *.tmp
 .cache/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
