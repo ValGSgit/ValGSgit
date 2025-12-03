@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Briefcase, MapPin, Calendar, ChevronRight } from "lucide-react";
+import { Briefcase, MapPin, ChevronRight } from "lucide-react";
 import { experience, education } from "@/data/portfolio";
 
 export default function ExperienceSection() {

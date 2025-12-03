@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect, KeyboardEvent } from "react";
+import { useState, useRef, useEffect, KeyboardEvent, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Bot, User, Sparkles, Loader2 } from "lucide-react";
-import { personalInfo, skills, education, experience, projects } from "@/data/portfolio";
+import { personalInfo, skills, experience, projects } from "@/data/portfolio";
 
 interface Message {
   id: string;
@@ -11,6 +11,13 @@ interface Message {
   content: string;
   timestamp: Date;
 }
+
+// Counter for generating unique IDs
+let messageIdCounter = 0;
+const generateMessageId = () => {
+  messageIdCounter += 1;
+  return `msg-${messageIdCounter}`;
+};
 
 const suggestedQuestions = [
   "What are your main technical skills?",
@@ -120,11 +127,11 @@ export default function AIChatbot() {
     }
   }, [isOpen]);
 
-  const handleSend = async () => {
+  const handleSend = useCallback(async () => {
     if (!input.trim()) return;
 
     const userMessage: Message = {
-      id: Date.now().toString(),
+      id: generateMessageId(),
       role: "user",
       content: input.trim(),
       timestamp: new Date(),
@@ -134,13 +141,13 @@ export default function AIChatbot() {
     setInput("");
     setIsTyping(true);
 
-    // Simulate AI thinking time
-    await new Promise((resolve) => setTimeout(resolve, 800 + Math.random() * 700));
+    // Simulate AI thinking time (fixed delay for purity)
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const response = generateResponse(userMessage.content);
 
     const assistantMessage: Message = {
-      id: (Date.now() + 1).toString(),
+      id: generateMessageId(),
       role: "assistant",
       content: response,
       timestamp: new Date(),
@@ -148,7 +155,7 @@ export default function AIChatbot() {
 
     setIsTyping(false);
     setMessages((prev) => [...prev, assistantMessage]);
-  };
+  }, [input]);
 
   const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {

@@ -1,9 +1,26 @@
 "use client";
 
-import { useRef, useMemo, useState, useEffect } from "react";
+import { useRef, useMemo, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
+
+// Seeded random for consistent particle positions
+function seededRandom(seed: number): number {
+  const x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+}
+
+// Generate particle positions with a seed for consistency
+function generateParticlePositions(count: number): Float32Array {
+  const positions = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    positions[i * 3] = (seededRandom(i * 3) - 0.5) * 10;
+    positions[i * 3 + 1] = (seededRandom(i * 3 + 1) - 0.5) * 10;
+    positions[i * 3 + 2] = (seededRandom(i * 3 + 2) - 0.5) * 10;
+  }
+  return positions;
+}
 
 // Detect device capabilities for particle count
 const getParticleCount = () => {
@@ -21,14 +38,7 @@ function ParticleField() {
   const [particleCount] = useState(getParticleCount);
   
   const particlesPosition = useMemo(() => {
-    const count = particleCount;
-    const positions = new Float32Array(count * 3);
-    for (let i = 0; i < count; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 10;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
-    }
-    return positions;
+    return generateParticlePositions(particleCount);
   }, [particleCount]);
 
   useFrame((state) => {

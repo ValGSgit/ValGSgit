@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Code, Server, Globe, Cpu, Terminal, Database } from "lucide-react";
+import { Code, Globe, Cpu, Terminal } from "lucide-react";
 import { skills } from "@/data/portfolio";
 
 const categories = [

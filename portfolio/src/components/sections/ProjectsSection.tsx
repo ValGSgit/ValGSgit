@@ -2,12 +2,8 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Github, ExternalLink, Star, GitFork, Code, Filter } from "lucide-react";
+import { Github, ExternalLink, Star, Code, Filter } from "lucide-react";
 import { projects } from "@/data/portfolio";
-
-const allTechnologies = Array.from(
-  new Set(projects.flatMap((p) => p.technologies))
-).sort();
 
 export default function ProjectsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
