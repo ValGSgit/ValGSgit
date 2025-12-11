@@ -22,8 +22,9 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const width = entry.target.getAttribute('data-width');
-          if (width) {
+          const widthAttr = entry.target.getAttribute('data-width');
+          const width = parseInt(widthAttr, 10);
+          if (width && width >= 0 && width <= 100) {
             entry.target.style.width = width + '%';
           }
           observer.unobserve(entry.target);
@@ -72,7 +73,7 @@
           const match = text.match(/(\d+)/);
           
           if (match) {
-            const finalNumber = parseInt(match[0]);
+            const finalNumber = parseInt(match[0], 10);
             const suffix = text.replace(match[0], '');
             let current = 0;
             const increment = finalNumber / 30;
