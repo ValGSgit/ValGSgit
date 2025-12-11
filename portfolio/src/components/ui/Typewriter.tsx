@@ -35,8 +35,12 @@ export default function Typewriter({
 
     if (isDeleting) {
       if (displayText === "") {
-        setIsDeleting(false);
-        setCurrentIndex((prev) => (prev + 1) % texts.length);
+        // Schedule state updates in a timer to avoid synchronous setState in effect
+        const resetTimer = setTimeout(() => {
+          setIsDeleting(false);
+          setCurrentIndex((prev) => (prev + 1) % texts.length);
+        }, 0);
+        return () => clearTimeout(resetTimer);
       } else {
         const deleteTimer = setTimeout(() => {
           setDisplayText((prev) => prev.slice(0, -1));
@@ -45,7 +49,10 @@ export default function Typewriter({
       }
     } else {
       if (displayText === currentText) {
-        setIsPaused(true);
+        const pauseTimer = setTimeout(() => {
+          setIsPaused(true);
+        }, 0);
+        return () => clearTimeout(pauseTimer);
       } else {
         const typeTimer = setTimeout(() => {
           setDisplayText(currentText.slice(0, displayText.length + 1));

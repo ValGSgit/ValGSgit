@@ -18,31 +18,35 @@ The Jekyll site deploys automatically on push to the `main` branch via GitHub Ac
 
 ### Vercel Deployment Setup
 
-The Next.js portfolio app is located in the `portfolio/` subdirectory. The `vercel.json` file at the root is configured to:
-- Build from the `portfolio/` directory
-- Install dependencies with `npm install`
-- Build using `npm run build`
+The Next.js portfolio app is located in the `portfolio/` subdirectory.
 
-> **Note**: If your Vercel deployment was previously configured and now failing, it might be because the old configuration had settings that conflict with the new `vercel.json`. In that case, you have two options:
-> 1. Delete and recreate the Vercel project to use the new configuration (recommended)
-> 2. Manually update the project settings in the Vercel dashboard to match the configuration below
+> **Important**: Since the Next.js app is in a subdirectory, you MUST configure the root directory in Vercel.
 
-### Option 1: Deploy with Root Configuration (Recommended)
-The `vercel.json` at the root is configured to automatically handle the subdirectory structure. When you import the repository to Vercel:
+### Step-by-Step Deployment Instructions
 
-1. Import the repository: `ValGSgit/ValGSgit`
-2. Vercel will automatically detect the `vercel.json` configuration
-3. The build commands will automatically navigate to the `portfolio/` directory
-4. No additional configuration needed!
+#### Option 1: New Vercel Project (Recommended)
 
-### Option 2: Configure Root Directory in Vercel Dashboard
-If you prefer to configure the root directory in the Vercel dashboard instead:
+1. Go to [Vercel Dashboard](https://vercel.com/dashboard)
+2. Click "Add New..." → "Project"
+3. Import your GitHub repository: `ValGSgit/ValGSgit`
+4. **Configure Project Settings:**
+   - Framework Preset: **Next.js**
+   - Root Directory: **portfolio** (Click "Edit" and select)
+   - Build Command: Leave as default (uses `npm run build`)
+   - Output Directory: Leave as default (`.next`)
+   - Install Command: Leave as default (uses `npm install`)
+5. Click "Deploy"
 
-1. Go to your Vercel project settings
-2. Navigate to "General" → "Root Directory"
-3. Set Root Directory to: `portfolio`
-4. Framework Preset will auto-detect as "Next.js"
-5. Leave Build & Development settings as default (they'll use package.json scripts)
+#### Option 2: Update Existing Vercel Project
+
+If you already have a Vercel project that's failing:
+
+1. Go to your Vercel project dashboard
+2. Navigate to **Settings** → **General**
+3. Under **Root Directory**, click "Edit"
+4. Select **portfolio** from the dropdown
+5. Click "Save"
+6. Go to **Deployments** and click "Redeploy" on the latest deployment
 
 ### Environment Variables
 No environment variables are currently required. The app uses:
