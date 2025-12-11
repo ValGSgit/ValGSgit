@@ -32,10 +32,33 @@ yarn-error.log*
 dist
 build
 
-# Jekyll (root level)
+# Jekyll (root level) - Not needed for Vercel deployment
 _site
-.sass-cache
+_sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
 Gemfile.lock
+_config.yml
+_includes
+_layouts
+_projects
+Gemfile
+
+# GitHub workflows - Not needed for deployment
+.github
+
+# Git files
+.git
+.gitignore
+
+# Documentation (not needed for runtime)
+README.md
+DEPLOYMENT.md
+
+# 3D contribution profile (static assets not needed)
+profile-3d-contrib
+
+# Root HTML files (Jekyll site, not Next.js)
+/*.html
+!portfolio/**/*.html
