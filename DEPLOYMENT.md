@@ -24,6 +24,10 @@ The Next.js portfolio app is located in the `portfolio/` subdirectory. The `verc
 - Build using `npm run build`
 - Only trigger deployments when files in `portfolio/` change
 
+> **Note**: If your Vercel deployment was previously configured and now failing, it might be because the old configuration had settings that conflict with the new `vercel.json`. In that case, you have two options:
+> 1. Delete and recreate the Vercel project to use the new configuration (recommended)
+> 2. Manually update the project settings in the Vercel dashboard to match the configuration below
+
 ### Option 1: Deploy with Root Configuration (Recommended)
 The `vercel.json` at the root is configured to automatically handle the subdirectory structure. When you import the repository to Vercel:
 
