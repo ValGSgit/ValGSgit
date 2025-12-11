@@ -3,7 +3,6 @@
   "buildCommand": "cd portfolio && npm run build",
   "devCommand": "cd portfolio && npm run dev",
   "installCommand": "cd portfolio && npm install",
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./portfolio",
   "framework": "nextjs",
   "outputDirectory": "portfolio/.next"
 }

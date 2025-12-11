@@ -22,7 +22,6 @@ The Next.js portfolio app is located in the `portfolio/` subdirectory. The `verc
 - Build from the `portfolio/` directory
 - Install dependencies with `npm install`
 - Build using `npm run build`
-- Only trigger deployments when files in `portfolio/` change
 
 > **Note**: If your Vercel deployment was previously configured and now failing, it might be because the old configuration had settings that conflict with the new `vercel.json`. In that case, you have two options:
 > 1. Delete and recreate the Vercel project to use the new configuration (recommended)
@@ -67,10 +66,10 @@ No environment variables are currently required. The app uses:
 - The build commands include `npm install` in the portfolio directory
 - If issues persist, clear the Vercel build cache and redeploy
 
-#### Deployment ignores changes
-- The `ignoreCommand` is configured to only deploy when `portfolio/` files change
-- Changes to root directory files (Jekyll site) won't trigger Vercel deployments
-- This is intentional to avoid unnecessary builds
+#### Controlling deployments
+- Vercel will build on every push to the connected branch by default
+- To limit deployments to only when portfolio files change, configure "Ignored Build Step" in your Vercel project settings
+- Alternatively, you can configure branch-specific deployments in the Vercel dashboard
 
 ### Manual Deployment
 To manually trigger a deployment:
