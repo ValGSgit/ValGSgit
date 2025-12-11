@@ -65,33 +65,80 @@
 
   
   <main class="main-content">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+      <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
     <div class="cv-container">
-  <div class="cv-header">
-    <div class="cv-personal-info">
-      <h1>Valentino Garcia Susini</h1>
-      <p class="cv-title">Full-Stack Software Developer</p>
-      <div class="cv-contact-info">
-        <span>📧 valentinogsusini@gmail.com</span>
-        <span>📱 +43 676 750 41 83</span>
-        <span>📍 1020 Vienna, Austria</span>
-        <span>🌍 Italian & Argentine Citizen</span>
+  <!-- Enhanced CV Hero -->
+  <div class="cv-hero particle-bg reveal">
+    <div class="cv-hero-content">
+      <div class="cv-avatar">VGS</div>
+      <div class="cv-intro">
+        <h1>Valentino Garcia Susini</h1>
+        <p class="cv-title">Full-Stack Software Developer</p>
+        <div class="cv-quick-stats">
+          <div class="cv-stat tooltip" data-tooltip="Contact via email">
+            <span class="cv-stat-icon">📧</span>
+            <span>valentinogsusini@gmail.com</span>
+          </div>
+          <div class="cv-stat tooltip" data-tooltip="Call me">
+            <span class="cv-stat-icon">📱</span>
+            <span>+43 676 750 41 83</span>
+          </div>
+          <div class="cv-stat tooltip" data-tooltip="Based in Vienna">
+            <span class="cv-stat-icon">📍</span>
+            <span>1020 Vienna, Austria</span>
+          </div>
+          <div class="cv-stat tooltip" data-tooltip="EU Work Permit">
+            <span class="cv-stat-icon">🌍</span>
+            <span>Italian & Argentine Citizen</span>
+          </div>
+        </div>
+      </div>
+      <div class="cv-actions">
+        <a href="assets/documents/cv.pdf" class="btn btn-primary animate-pulse-hover" download="Valentino_Garcia_Susini_CV.pdf">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 12l-4-4h3V0h2v8h3l-4 4z"/>
+            <path d="M0 14h16v2H0z"/>
+          </svg>
+          Download PDF
+        </a>
+        <button onclick="window.print()" class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M4 0v4H0v8h4v4h8v-4h4V4h-4V0H4zm2 2h4v2H6V2zm6 10v2H4v-2H2V6h12v6h-2z"/>
+          </svg>
+          Print CV
+        </button>
       </div>
     </div>
-    <div class="cv-actions">
-      <a href="assets/documents/cv.pdf" class="btn btn-primary" download="Valentino_Garcia_Susini_CV.pdf">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-          <path d="M8 12l-4-4h3V0h2v8h3l-4 4z"/>
-          <path d="M0 14h16v2H0z"/>
-        </svg>
-        Download PDF
-      </a>
+  </div>
+
+  <!-- Quick Stats Cards -->
+  <div class="cv-stats-grid reveal stagger-1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-2xl);">
+    <div class="cv-stat-card tilt-card" style="background: linear-gradient(135deg, #dbeafe, #bfdbfe); padding: var(--space-lg); border-radius: var(--radius-xl); text-align: center; border: 1px solid #60a5fa;">
+      <div class="stat-counter">9+</div>
+      <div style="color: #1e40af; font-weight: 600;">Programming Languages</div>
+    </div>
+    <div class="cv-stat-card tilt-card" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0); padding: var(--space-lg); border-radius: var(--radius-xl); text-align: center; border: 1px solid #34d399;">
+      <div class="stat-counter">10+</div>
+      <div style="color: #065f46; font-weight: 600;">Projects Completed</div>
+    </div>
+    <div class="cv-stat-card tilt-card" style="background: linear-gradient(135deg, #fef3c7, #fde68a); padding: var(--space-lg); border-radius: var(--radius-xl); text-align: center; border: 1px solid #fbbf24;">
+      <div class="stat-counter">3</div>
+      <div style="color: #92400e; font-weight: 600;">Languages Spoken</div>
+    </div>
+    <div class="cv-stat-card tilt-card" style="background: linear-gradient(135deg, #e0e7ff, #c7d2fe); padding: var(--space-lg); border-radius: var(--radius-xl); text-align: center; border: 1px solid #818cf8;">
+      <div class="stat-counter">42</div>
+      <div style="color: #3730a3; font-weight: 600;">Vienna Student</div>
     </div>
   </div>
 
   <!-- Full CV View -->
   <div id="full-cv" class="cv-content">
     
-    <section class="cv-section">
+    <section class="cv-section reveal">
       <h2 class="cv-section-title">Professional Summary</h2>
       <div class="cv-summary">
         <p>
@@ -100,131 +147,269 @@
       </div>
     </section>
 
-    <section class="cv-section">
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-icon">🎓</div>
+      <div class="section-divider-line"></div>
+    </div>
+
+    <section class="cv-section reveal">
       <h2 class="cv-section-title">Education</h2>
       
-      <div class="cv-item">
-        <div class="cv-item-header">
-          <div>
-            <h3 class="cv-item-title">42 Vienna</h3>
-            <p class="cv-item-subtitle">Bachelor/RNCP 6 - Full Stack Software Developer</p>
+      <div class="cv-timeline">
+        <div class="cv-timeline-item" data-aos="fade-right">
+          <div class="cv-timeline-card">
+            <div class="cv-item-header">
+              <div>
+                <h3 class="cv-item-title">42 Vienna</h3>
+                <p class="cv-item-subtitle">Bachelor/RNCP 6 - Full Stack Software Developer</p>
+              </div>
+              <div class="cv-item-date" style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white;">In Progress</div>
+            </div>
+            <div class="cv-item-content">
+              <p class="cv-location">📍 Vienna, Austria</p>
+              <p>The curriculum at 42 emphasizes peer learning, where students evaluate each other's work, enhancing communication and teamwork skills. It covers a wide array of technical subjects, including programming languages, algorithms, system administration, and cybersecurity, while also developing essential soft skills like adaptability, problem-solving, and self-learning.</p>
+              <ul>
+                <li>Peer-to-peer learning methodology</li>
+                <li>Project-based curriculum</li>
+                <li>Focus on algorithms, system administration, and cybersecurity</li>
+              </ul>
+            </div>
           </div>
-          <div class="cv-item-date">In Progress</div>
         </div>
-        <div class="cv-item-content">
-          <p class="cv-location">Vienna, Austria</p>
-          <p>The curriculum at 42 emphasizes peer learning, where students evaluate each other's work, enhancing communication and teamwork skills. It covers a wide array of technical subjects, including programming languages, algorithms, system administration, and cybersecurity, while also developing essential soft skills like adaptability, problem-solving, and self-learning.</p>
-          <ul>
-            <li>Peer-to-peer learning methodology</li>
-            <li>Project-based curriculum</li>
-            <li>Focus on algorithms, system administration, and cybersecurity</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="cv-item">
-        <div class="cv-item-header">
-          <div>
-            <h3 class="cv-item-title">Universidad de Palermo</h3>
-            <p class="cv-item-subtitle">Bachelor in System Analytics</p>
+        <div class="cv-timeline-item" data-aos="fade-right" data-aos-delay="100">
+          <div class="cv-timeline-card">
+            <div class="cv-item-header">
+              <div>
+                <h3 class="cv-item-title">Universidad de Palermo</h3>
+                <p class="cv-item-subtitle">Bachelor in System Analytics</p>
+              </div>
+              <div class="cv-item-date">2023</div>
+            </div>
+            <div class="cv-item-content">
+              <p class="cv-location">📍 Buenos Aires, Argentina (Online)</p>
+            </div>
           </div>
-          <div class="cv-item-date">2023</div>
         </div>
-        <div class="cv-item-content">
-          <p class="cv-location">Buenos Aires, Argentina (Online)</p>
-        </div>
-      </div>
 
-      <div class="cv-item">
-        <div class="cv-item-header">
-          <div>
-            <h3 class="cv-item-title">E.S.R.N 123</h3>
-            <p class="cv-item-subtitle">High School Diploma - Specialized in Natural Sciences</p>
+        <div class="cv-timeline-item" data-aos="fade-right" data-aos-delay="200">
+          <div class="cv-timeline-card">
+            <div class="cv-item-header">
+              <div>
+                <h3 class="cv-item-title">E.S.R.N 123</h3>
+                <p class="cv-item-subtitle">High School Diploma - Specialized in Natural Sciences</p>
+              </div>
+              <div class="cv-item-date">2019</div>
+            </div>
+            <div class="cv-item-content">
+              <p class="cv-location">📍 Bariloche, Rio Negro, Patagonia, Argentina</p>
+            </div>
           </div>
-          <div class="cv-item-date">2019</div>
-        </div>
-        <div class="cv-item-content">
-          <p class="cv-location">Bariloche, Rio Negro, Patagonia, Argentina</p>
         </div>
       </div>
     </section>
 
-    <section class="cv-section">
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-icon">💻</div>
+      <div class="section-divider-line"></div>
+    </div>
+
+    <section class="cv-section reveal">
       <h2 class="cv-section-title">Technical Skills</h2>
       
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h4>Programming Languages</h4>
-          <div class="skill-items">
-            <span class="skill-badge expert">C</span>
-            <span class="skill-badge expert">C++</span>
-            <span class="skill-badge proficient">Python</span>
-            <span class="skill-badge proficient">JavaScript</span>
-            <span class="skill-badge intermediate">Fortran</span>
-            <span class="skill-badge proficient">Bash</span>
-            <span class="skill-badge intermediate">HTML</span>
-            <span class="skill-badge intermediate">CSS</span>
-            <span class="skill-badge intermediate">PHP</span>
+      <!-- Interactive Skill Progress Bars -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-xl);">
+        <div class="skill-category glass-card" style="padding: var(--space-xl); border-radius: var(--radius-xl);">
+          <h4 style="margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-sm);">
+            <span style="font-size: 1.5rem;">🔧</span> Programming Languages
+          </h4>
+          
+          <div class="skill-progress-container">
+            <div class="skill-progress-header">
+              <span class="skill-progress-name">C</span>
+              <span class="skill-progress-level">Expert • 95%</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill expert" data-width="95"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress-container">
+            <div class="skill-progress-header">
+              <span class="skill-progress-name">C++</span>
+              <span class="skill-progress-level">Expert • 90%</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill expert" data-width="90"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress-container">
+            <div class="skill-progress-header">
+              <span class="skill-progress-name">Python</span>
+              <span class="skill-progress-level">Proficient • 85%</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill proficient" data-width="85"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress-container">
+            <div class="skill-progress-header">
+              <span class="skill-progress-name">JavaScript</span>
+              <span class="skill-progress-level">Proficient • 80%</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill proficient" data-width="80"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress-container">
+            <div class="skill-progress-header">
+              <span class="skill-progress-name">Bash</span>
+              <span class="skill-progress-level">Proficient • 85%</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill proficient" data-width="85"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress-container">
+            <div class="skill-progress-header">
+              <span class="skill-progress-name">HTML/CSS</span>
+              <span class="skill-progress-level">Intermediate • 75%</span>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="skill-progress-fill intermediate" data-width="75"></div>
+            </div>
           </div>
         </div>
 
-        <div class="skill-category">
-          <h4>Systems & Tools</h4>
-          <div class="skill-items">
-            <span class="skill-badge expert">Linux/Unix Command Line</span>
-            <span class="skill-badge expert">Git & GitHub</span>
-            <span class="skill-badge proficient">Shell Scripting</span>
-            <span class="skill-badge proficient">Docker</span>
-            <span class="skill-badge proficient">Virtual Machines</span>
-            <span class="skill-badge proficient">Makefile</span>
-            <span class="skill-badge proficient">CMake</span>
-            <span class="skill-badge intermediate">GitHub Actions</span>
-            <span class="skill-badge intermediate">Jekyll</span>
+        <div class="skill-category glass-card" style="padding: var(--space-xl); border-radius: var(--radius-xl);">
+          <h4 style="margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-sm);">
+            <span style="font-size: 1.5rem;">⚙️</span> Systems & Tools
+          </h4>
+          <div class="skill-items" style="display: flex; flex-wrap: wrap; gap: var(--space-sm);">
+            <span class="skill-badge expert animate-pulse-hover">Linux/Unix CLI</span>
+            <span class="skill-badge expert animate-pulse-hover">Git & GitHub</span>
+            <span class="skill-badge proficient animate-pulse-hover">Shell Scripting</span>
+            <span class="skill-badge proficient animate-pulse-hover">Docker</span>
+            <span class="skill-badge proficient animate-pulse-hover">Virtual Machines</span>
+            <span class="skill-badge proficient animate-pulse-hover">Makefile</span>
+            <span class="skill-badge proficient animate-pulse-hover">CMake</span>
+            <span class="skill-badge intermediate animate-pulse-hover">GitHub Actions</span>
+            <span class="skill-badge intermediate animate-pulse-hover">Jekyll</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <h4>Web & Network Technologies</h4>
-          <div class="skill-items">
-            <span class="skill-badge proficient">HTTP/1.1 Protocol</span>
-            <span class="skill-badge proficient">CGI</span>
-            <span class="skill-badge proficient">Network Programming</span>
-            <span class="skill-badge proficient">I/O Multiplexing</span>
-            <span class="skill-badge proficient">epoll</span>
-            <span class="skill-badge intermediate">RESTful APIs</span>
-            <span class="skill-badge intermediate">GitHub Pages</span>
-            <span class="skill-badge intermediate">Responsive Web Design</span>
+        <div class="skill-category glass-card" style="padding: var(--space-xl); border-radius: var(--radius-xl);">
+          <h4 style="margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-sm);">
+            <span style="font-size: 1.5rem;">🌐</span> Web & Network
+          </h4>
+          <div class="skill-items" style="display: flex; flex-wrap: wrap; gap: var(--space-sm);">
+            <span class="skill-badge proficient animate-pulse-hover">HTTP/1.1 Protocol</span>
+            <span class="skill-badge proficient animate-pulse-hover">CGI</span>
+            <span class="skill-badge proficient animate-pulse-hover">Network Programming</span>
+            <span class="skill-badge proficient animate-pulse-hover">I/O Multiplexing</span>
+            <span class="skill-badge proficient animate-pulse-hover">epoll</span>
+            <span class="skill-badge intermediate animate-pulse-hover">RESTful APIs</span>
+            <span class="skill-badge intermediate animate-pulse-hover">GitHub Pages</span>
+            <span class="skill-badge intermediate animate-pulse-hover">Responsive Design</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <h4>Core Competencies & Specializations</h4>
-          <div class="skill-items">
-            <span class="skill-badge proficient">Algorithms & Data Structures</span>
-            <span class="skill-badge proficient">System Programming</span>
-            <span class="skill-badge proficient">Graphics Programming (OpenGL)</span>
-            <span class="skill-badge proficient">SQL</span>
-            <span class="skill-badge proficient">Debugging and Troubleshooting</span>
-            <span class="skill-badge proficient">Software Testing & QA</span>
-            <span class="skill-badge proficient">Agile Methodology</span>
+        <div class="skill-category glass-card" style="padding: var(--space-xl); border-radius: var(--radius-xl);">
+          <h4 style="margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-sm);">
+            <span style="font-size: 1.5rem;">🎯</span> Core Competencies
+          </h4>
+          <div class="skill-items" style="display: flex; flex-wrap: wrap; gap: var(--space-sm);">
+            <span class="skill-badge proficient animate-pulse-hover">Algorithms & Data Structures</span>
+            <span class="skill-badge proficient animate-pulse-hover">System Programming</span>
+            <span class="skill-badge proficient animate-pulse-hover">Graphics (OpenGL)</span>
+            <span class="skill-badge proficient animate-pulse-hover">SQL</span>
+            <span class="skill-badge proficient animate-pulse-hover">Debugging</span>
+            <span class="skill-badge proficient animate-pulse-hover">Testing & QA</span>
+            <span class="skill-badge proficient animate-pulse-hover">Agile</span>
           </div>
+        </div>
+      </div>
+
+      <!-- Skill Level Legend -->
+      <div style="display: flex; justify-content: center; gap: var(--space-xl); flex-wrap: wrap; padding: var(--space-md); background: var(--bg-secondary); border-radius: var(--radius-lg);">
+        <div style="display: flex; align-items: center; gap: var(--space-xs);">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #06b6d4);"></div>
+          <span style="font-size: 0.875rem; color: var(--text-secondary);">Expert (90%+)</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-xs);">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #34d399);"></div>
+          <span style="font-size: 0.875rem; color: var(--text-secondary);">Proficient (80%+)</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-xs);">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #f59e0b, #fbbf24);"></div>
+          <span style="font-size: 0.875rem; color: var(--text-secondary);">Intermediate (70%+)</span>
         </div>
       </div>
     </section>
 
-    <section class="cv-section">
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-icon">🤝</div>
+      <div class="section-divider-line"></div>
+    </div>
+
+    <section class="cv-section reveal">
       <h2 class="cv-section-title">Soft Skills</h2>
-      <div class="soft-skills-compact">
-        <ul>
-          <li>Continuous and Self-Directed Learning</li>
-          <li>Time Management</li>
-          <li>Critical Thinking</li>
-          <li>Adaptability to New Tools and Business Processes</li>
-          <li>Project Planning & Execution</li>
-          <li>Resilience and Perseverance</li>
-          <li>Effective Communication</li>
-          <li>Team Collaboration & Conflict Resolution</li>
-        </ul>
+      <div class="skill-radar">
+        <div class="skill-radar-item">
+          <span class="skill-radar-icon">📚</span>
+          <div class="skill-radar-name">Self-Directed Learning</div>
+          <div class="skill-radar-level">Continuous growth mindset</div>
+        </div>
+        <div class="skill-radar-item">
+          <span class="skill-radar-icon">⏰</span>
+          <div class="skill-radar-name">Time Management</div>
+          <div class="skill-radar-level">Efficient prioritization</div>
+        </div>
+        <div class="skill-radar-item">
+          <span class="skill-radar-icon">🧠</span>
+          <div class="skill-radar-name">Critical Thinking</div>
+          <div class="skill-radar-level">Analytical problem solver</div>
+        </div>
+        <div class="skill-radar-item">
+          <span class="skill-radar-icon">🔄</span>
+          <div class="skill-radar-name">Adaptability</div>
+          <div class="skill-radar-level">Quick to learn new tools</div>
+        </div>
+        <div class="skill-radar-item">
+          <span class="skill-radar-icon">📋</span>
+          <div class="skill-radar-name">Project Planning</div>
+          <div class="skill-radar-level">Organized execution</div>
+        </div>
+        <div class="skill-radar-item">
+          <span class="skill-radar-icon">💪</span>
+          <div class="skill-radar-name">Resilience</div>
+          <div class="skill-radar-level">Perseverance under pressure</div>
+        </div>
+        <div class="skill-radar-item">
+          <span class="skill-radar-icon">💬</span>
+          <div class="skill-radar-name">Communication</div>
+          <div class="skill-radar-level">Clear & multilingual</div>
+        </div>
+        <div class="skill-radar-item">
+          <span class="skill-radar-icon">👥</span>
+          <div class="skill-radar-name">Team Collaboration</div>
+          <div class="skill-radar-level">Conflict resolution</div>
+        </div>
+        <div class="skill-radar-item">
+          <span class="skill-radar-icon">🔍</span>
+          <div class="skill-radar-name">Attention to Detail</div>
+          <div class="skill-radar-level">Code quality focus</div>
+        </div>
       </div>
     </section>
 
