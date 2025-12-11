@@ -24,42 +24,43 @@ export default function Typewriter({
 
   useEffect(() => {
     const currentText = texts[currentIndex];
+    let timerId: NodeJS.Timeout;
 
     if (isPaused) {
-      const pauseTimer = setTimeout(() => {
+      timerId = setTimeout(() => {
         setIsPaused(false);
         setIsDeleting(true);
       }, pauseTime);
-      return () => clearTimeout(pauseTimer);
-    }
-
-    if (isDeleting) {
+    } else if (isDeleting) {
       if (displayText === "") {
-        // Schedule state updates in a timer to avoid synchronous setState in effect
-        const resetTimer = setTimeout(() => {
+        // Move to next text after deletion
+        timerId = setTimeout(() => {
           setIsDeleting(false);
           setCurrentIndex((prev) => (prev + 1) % texts.length);
-        }, 0);
-        return () => clearTimeout(resetTimer);
+        }, 50); // Small delay before starting next text
       } else {
-        const deleteTimer = setTimeout(() => {
+        // Continue deleting
+        timerId = setTimeout(() => {
           setDisplayText((prev) => prev.slice(0, -1));
         }, deleteSpeed);
-        return () => clearTimeout(deleteTimer);
       }
     } else {
       if (displayText === currentText) {
-        const pauseTimer = setTimeout(() => {
+        // Finished typing, pause before deleting
+        timerId = setTimeout(() => {
           setIsPaused(true);
-        }, 0);
-        return () => clearTimeout(pauseTimer);
+        }, 100); // Small delay before pausing
       } else {
-        const typeTimer = setTimeout(() => {
+        // Continue typing
+        timerId = setTimeout(() => {
           setDisplayText(currentText.slice(0, displayText.length + 1));
         }, speed);
-        return () => clearTimeout(typeTimer);
       }
     }
+
+    return () => {
+      if (timerId) clearTimeout(timerId);
+    };
   }, [displayText, currentIndex, isDeleting, isPaused, texts, speed, deleteSpeed, pauseTime]);
 
   return (
