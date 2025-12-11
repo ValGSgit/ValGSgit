@@ -2,15 +2,23 @@
 
 import { useRef, Suspense } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown, MapPin, Globe, Briefcase, Download, ArrowRight } from "lucide-react";
+import { ChevronDown, MapPin, Globe, Briefcase, Download, ArrowRight, FileText } from "lucide-react";
 import dynamic from "next/dynamic";
 import { personalInfo } from "@/data/portfolio";
+import Typewriter from "@/components/ui/Typewriter";
 
 // Dynamically import Three.js component to avoid SSR issues
 const HeroBackground = dynamic(
   () => import("@/components/three/HeroBackground"),
   { ssr: false }
 );
+
+const typingTexts = [
+  "Building robust systems from low-level C to modern web applications",
+  "Crafting HTTP servers with epoll-based I/O multiplexing",
+  "Developing custom UNIX shells and graphics engines",
+  "Creating elegant solutions for complex problems",
+];
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -86,15 +94,21 @@ export default function HeroSection() {
           {personalInfo.title}
         </motion.h2>
 
-        {/* Tagline */}
-        <motion.p
+        {/* Tagline with Typewriter */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto mb-8"
+          className="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto mb-8 h-16 md:h-12"
         >
-          {personalInfo.tagline}
-        </motion.p>
+          <Typewriter 
+            texts={typingTexts}
+            speed={50}
+            deleteSpeed={30}
+            pauseTime={3000}
+            className="text-zinc-300"
+          />
+        </motion.div>
 
         {/* Stats */}
         <motion.div
@@ -137,8 +151,18 @@ export default function HeroSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection("resume")}
             className="px-8 py-4 bg-zinc-800 hover:bg-zinc-700 text-white font-semibold rounded-xl border border-zinc-700 transition-all duration-300 flex items-center justify-center gap-2"
+          >
+            <FileText className="w-5 h-5" />
+            View Resume
+          </motion.button>
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection("contact")}
+            className="px-8 py-4 bg-transparent hover:bg-zinc-800 text-white font-semibold rounded-xl border border-zinc-600 hover:border-zinc-500 transition-all duration-300 flex items-center justify-center gap-2"
           >
             <Download className="w-5 h-5" />
             Get In Touch
