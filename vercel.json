@@ -1,7 +1,9 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd portfolio && npm install && npm run build",
+  "devCommand": "cd portfolio && npm run dev",
+  "installCommand": "cd portfolio && npm install",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./portfolio/",
   "framework": "nextjs",
-  "rootDirectory": "portfolio",
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
-  "devCommand": "npm run dev"
+  "outputDirectory": "portfolio/.next"
 }
