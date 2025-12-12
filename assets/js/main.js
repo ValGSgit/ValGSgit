@@ -274,6 +274,90 @@
     });
   }
 
+  // CV Sidebar Navigation
+  function initCVSidebar() {
+    const sidebar = document.getElementById('cv-sidebar');
+    if (!sidebar) return;
+    
+    const navLinks = sidebar.querySelectorAll('.cv-nav-link');
+    const sections = document.querySelectorAll('.cv-hero-section, .cv-section, .cv-cta');
+    
+    // Update active link based on scroll position
+    function updateActiveLink() {
+      let currentSection = '';
+      const scrollY = window.pageYOffset + 150;
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('data-section') === currentSection || 
+            link.getAttribute('href') === '#' + currentSection) {
+          link.classList.add('active');
+        }
+      });
+    }
+    
+    // Smooth scroll to section on click
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          
+          // Update URL
+          history.pushState(null, null, '#' + targetId);
+        }
+      });
+    });
+    
+    window.addEventListener('scroll', updateActiveLink);
+    updateActiveLink();
+  }
+
+  // Enhanced skill bar animation for CV page
+  function initCVSkillBars() {
+    const skillBars = document.querySelectorAll('.cv-skill-bar-fill');
+    if (skillBars.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const widthAttr = entry.target.getAttribute('data-width');
+          const width = parseInt(widthAttr, 10);
+          if (!isNaN(width) && width >= 0 && width <= 100) {
+            // Add small delay for staggered animation effect
+            setTimeout(() => {
+              entry.target.style.width = width + '%';
+            }, 100);
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '0px'
+    });
+
+    skillBars.forEach(bar => {
+      bar.style.width = '0%';
+      observer.observe(bar);
+    });
+  }
+
   // Initialize all features when DOM is ready
   function init() {
     initSmoothScroll();
@@ -287,6 +371,8 @@
     initRevealAnimations();
     animateCounters();
     initTiltEffect();
+    initCVSidebar();
+    initCVSkillBars();
     
     // Add loaded class to body for CSS transitions
     document.body.classList.add('loaded');

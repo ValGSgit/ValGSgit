@@ -5,21 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Curriculum Vitae - Valentino Garcia Susini - Full-Stack Software Developer</title>
+  <title>CV - Valentino Garcia Susini - Full-Stack Software Developer</title>
   
-  <meta name="description" content="Professional portfolio showcasing full-stack software development skills, projects, and experience.">
+  <meta name="description" content="Professional CV of Valentino Garcia Susini - Full-Stack Software Developer specializing in systems programming, web technologies, and network programming.">
   <meta name="author" content="Valentino Garcia Susini">
+  <meta name="keywords" content="software developer, full-stack, C, C++, Python, JavaScript, 42 Vienna, CV, resume">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Curriculum Vitae - Valentino Garcia Susini - Full-Stack Software Developer">
-  <meta property="og:description" content="Professional portfolio showcasing full-stack software development skills, projects, and experience.">
-  <meta property="og:url" content="https://ValGSgit.github.io">
+  <meta property="og:title" content="CV - Valentino Garcia Susini - Full-Stack Software Developer">
+  <meta property="og:description" content="Professional CV showcasing full-stack software development skills, projects, and experience.">
+  <meta property="og:url" content="https://ValGSgit.github.io/cv.html">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Curriculum Vitae - Valentino Garcia Susini - Full-Stack Software Developer">
-  <meta name="twitter:description" content="Professional portfolio showcasing full-stack software development skills, projects, and experience.">
+  <meta name="twitter:title" content="CV - Valentino Garcia Susini - Full-Stack Software Developer">
+  <meta name="twitter:description" content="Professional CV showcasing full-stack software development skills, projects, and experience.">
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -27,515 +28,640 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="cv-page">
   <header class="site-header">
-  <nav class="navbar">
-    <div class="container">
-      <div class="nav-brand">
-        <a href="index.html">Valentino Garcia Susini</a>
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <a href="index.html">Valentino Garcia Susini</a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="cv.html" class="nav-link active" data-i18n="nav.cv">CV</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" data-i18n="nav.about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+          </li>
+        </ul>
       </div>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a href="cv.html" class="nav-link" data-i18n="nav.cv">CV</a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link" data-i18n="nav.about">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
-  
   <main class="main-content">
     <!-- Scroll Progress Indicator -->
     <div class="scroll-progress">
       <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
     </div>
 
+    <!-- CV Navigation Sidebar -->
+    <nav class="cv-sidebar" id="cv-sidebar" aria-label="CV sections navigation">
+      <ul class="cv-nav-list">
+        <li><a href="#cv-hero" class="cv-nav-link active" data-section="cv-hero" aria-label="Profile section"><span class="cv-nav-icon" aria-hidden="true">👤</span><span class="cv-nav-text">Profile</span></a></li>
+        <li><a href="#summary" class="cv-nav-link" data-section="summary" aria-label="Summary section"><span class="cv-nav-icon" aria-hidden="true">📋</span><span class="cv-nav-text">Summary</span></a></li>
+        <li><a href="#skills" class="cv-nav-link" data-section="skills" aria-label="Skills section"><span class="cv-nav-icon" aria-hidden="true">💻</span><span class="cv-nav-text">Skills</span></a></li>
+        <li><a href="#experience" class="cv-nav-link" data-section="experience" aria-label="Experience section"><span class="cv-nav-icon" aria-hidden="true">💼</span><span class="cv-nav-text">Experience</span></a></li>
+        <li><a href="#education" class="cv-nav-link" data-section="education" aria-label="Education section"><span class="cv-nav-icon" aria-hidden="true">🎓</span><span class="cv-nav-text">Education</span></a></li>
+        <li><a href="#languages" class="cv-nav-link" data-section="languages" aria-label="Languages section"><span class="cv-nav-icon" aria-hidden="true">🌍</span><span class="cv-nav-text">Languages</span></a></li>
+        <li><a href="#download" class="cv-nav-link" data-section="download" aria-label="Download section"><span class="cv-nav-icon" aria-hidden="true">📄</span><span class="cv-nav-text">Download</span></a></li>
+      </ul>
+    </nav>
+
     <div class="cv-container">
-  <!-- Enhanced CV Hero -->
-  <div class="cv-hero particle-bg reveal">
-    <div class="cv-hero-content">
-      <div class="cv-avatar">VGS</div>
-      <div class="cv-intro">
-        <h1>Valentino Garcia Susini</h1>
-        <p class="cv-title">Full-Stack Software Developer</p>
-        <div class="cv-quick-stats">
-          <div class="cv-stat tooltip" data-tooltip="Contact via email">
-            <span class="cv-stat-icon">📧</span>
-            <span>valentinogsusini@gmail.com</span>
+      <!-- Enhanced CV Hero Section -->
+      <section class="cv-hero-section particle-bg reveal" id="cv-hero">
+        <div class="cv-hero-bg-pattern"></div>
+        <div class="cv-hero-content">
+          <div class="cv-hero-left">
+            <div class="cv-avatar-wrapper">
+              <div class="cv-avatar-modern">
+                <span class="cv-avatar-initials">VGS</span>
+              </div>
+              <div class="cv-avatar-ring"></div>
+              <div class="cv-status-badge">
+                <span class="cv-status-dot"></span>
+                <span>Open to Work</span>
+              </div>
+            </div>
           </div>
-          <div class="cv-stat tooltip" data-tooltip="Call me">
-            <span class="cv-stat-icon">📱</span>
-            <span>+43 676 750 41 83</span>
+          
+          <div class="cv-hero-center">
+            <div class="cv-name-badge">Full-Stack Developer</div>
+            <h1 class="cv-hero-name">Valentino Garcia Susini</h1>
+            <p class="cv-hero-tagline">Building robust software solutions with expertise in systems programming, web technologies, and network applications</p>
+            
+            <div class="cv-contact-grid">
+              <a href="mailto:valentinogsusini@gmail.com" class="cv-contact-item" title="Send email">
+                <span class="cv-contact-icon">📧</span>
+                <span class="cv-contact-text">valentinogsusini@gmail.com</span>
+              </a>
+              <a href="tel:+436767504183" class="cv-contact-item" title="Call">
+                <span class="cv-contact-icon">📱</span>
+                <span class="cv-contact-text">+43 676 750 41 83</span>
+              </a>
+              <div class="cv-contact-item" title="Location">
+                <span class="cv-contact-icon">📍</span>
+                <span class="cv-contact-text">Vienna, Austria</span>
+              </div>
+              <div class="cv-contact-item" title="EU Work Authorization">
+                <span class="cv-contact-icon">🇪🇺</span>
+                <span class="cv-contact-text">Italian & Argentine Citizen</span>
+              </div>
+              <a href="https://github.com/ValGSgit" class="cv-contact-item" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+                <span class="cv-contact-icon">💻</span>
+                <span class="cv-contact-text">github.com/ValGSgit</span>
+              </a>
+              <a href="https://linkedin.com/in/valentinogs" class="cv-contact-item" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                <span class="cv-contact-icon">💼</span>
+                <span class="cv-contact-text">linkedin.com/in/valentinogs</span>
+              </a>
+            </div>
           </div>
-          <div class="cv-stat tooltip" data-tooltip="Based in Vienna">
-            <span class="cv-stat-icon">📍</span>
-            <span>1020 Vienna, Austria</span>
-          </div>
-          <div class="cv-stat tooltip" data-tooltip="EU Work Permit">
-            <span class="cv-stat-icon">🌍</span>
-            <span>Italian & Argentine Citizen</span>
+          
+          <div class="cv-hero-right">
+            <div class="cv-actions-vertical">
+              <a href="assets/documents/cv.pdf" class="cv-action-btn cv-action-primary" download="Valentino_Garcia_Susini_CV.pdf">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7,10 12,15 17,10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>Download CV</span>
+              </a>
+              <button onclick="window.print()" class="cv-action-btn cv-action-secondary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6,9 6,2 18,2 18,9"/>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                  <rect x="6" y="14" width="12" height="8"/>
+                </svg>
+                <span>Print</span>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="cv-actions">
-        <a href="assets/documents/cv.pdf" class="btn btn-primary animate-pulse-hover" download="Valentino_Garcia_Susini_CV.pdf">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M8 12l-4-4h3V0h2v8h3l-4 4z"/>
-            <path d="M0 14h16v2H0z"/>
-          </svg>
-          Download PDF
-        </a>
-        <button onclick="window.print()" class="btn btn-outline">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M4 0v4H0v8h4v4h8v-4h4V4h-4V0H4zm2 2h4v2H6V2zm6 10v2H4v-2H2V6h12v6h-2z"/>
-          </svg>
-          Print CV
-        </button>
-      </div>
-    </div>
-  </div>
+        
+        <!-- Quick Stats -->
+        <div class="cv-stats-row">
+          <div class="cv-stat-pill">
+            <span class="cv-stat-number">9+</span>
+            <span class="cv-stat-label">Languages</span>
+          </div>
+          <div class="cv-stat-pill">
+            <span class="cv-stat-number">15+</span>
+            <span class="cv-stat-label">Projects</span>
+          </div>
+          <div class="cv-stat-pill">
+            <span class="cv-stat-number">3</span>
+            <span class="cv-stat-label">Spoken Languages</span>
+          </div>
+          <div class="cv-stat-pill cv-stat-highlight">
+            <span class="cv-stat-number">42</span>
+            <span class="cv-stat-label">Vienna</span>
+          </div>
+        </div>
+      </section>
 
-  <!-- Quick Stats Cards -->
-  <div class="cv-stats-grid reveal stagger-1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-2xl);">
-    <div class="cv-stat-card tilt-card" style="background: linear-gradient(135deg, #dbeafe, #bfdbfe); padding: var(--space-lg); border-radius: var(--radius-xl); text-align: center; border: 1px solid #60a5fa;">
-      <div class="stat-counter">9+</div>
-      <div style="color: #1e40af; font-weight: 600;">Programming Languages</div>
-    </div>
-    <div class="cv-stat-card tilt-card" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0); padding: var(--space-lg); border-radius: var(--radius-xl); text-align: center; border: 1px solid #34d399;">
-      <div class="stat-counter">10+</div>
-      <div style="color: #065f46; font-weight: 600;">Projects Completed</div>
-    </div>
-    <div class="cv-stat-card tilt-card" style="background: linear-gradient(135deg, #fef3c7, #fde68a); padding: var(--space-lg); border-radius: var(--radius-xl); text-align: center; border: 1px solid #fbbf24;">
-      <div class="stat-counter">3</div>
-      <div style="color: #92400e; font-weight: 600;">Languages Spoken</div>
-    </div>
-    <div class="cv-stat-card tilt-card" style="background: linear-gradient(135deg, #e0e7ff, #c7d2fe); padding: var(--space-lg); border-radius: var(--radius-xl); text-align: center; border: 1px solid #818cf8;">
-      <div class="stat-counter">42</div>
-      <div style="color: #3730a3; font-weight: 600;">Vienna Student</div>
-    </div>
-  </div>
+      <!-- Professional Summary -->
+      <section class="cv-section reveal" id="summary">
+        <div class="cv-section-header">
+          <div class="cv-section-icon">📋</div>
+          <h2 class="cv-section-title">Professional Summary</h2>
+        </div>
+        <div class="cv-summary-content">
+          <div class="cv-summary-main">
+            <p class="cv-summary-lead">
+              Dedicated <strong>Full-Stack Software Developer</strong> with comprehensive expertise in systems programming and a passion for building efficient, scalable solutions.
+            </p>
+            <p class="cv-summary-text">
+              Currently completing intensive training at <strong>42 Vienna</strong>, I bring hands-on experience in building production-grade software including HTTP servers with epoll-based I/O multiplexing, custom UNIX shells, and OpenGL graphics engines. My strong problem-solving abilities, combined with multilingual communication skills and proven adaptability in international team environments, make me an effective contributor in diverse technical settings.
+            </p>
+          </div>
+          <div class="cv-summary-highlights">
+            <h4>Key Strengths</h4>
+            <ul class="cv-highlight-list">
+              <li><span class="highlight-icon">🔧</span>Systems Programming (C, C++)</li>
+              <li><span class="highlight-icon">🐍</span>Scripting (Python, Bash)</li>
+              <li><span class="highlight-icon">🌐</span>Web Technologies (JS, HTTP, CGI)</li>
+              <li><span class="highlight-icon">🔌</span>Network Programming & I/O Multiplexing</li>
+              <li><span class="highlight-icon">🎮</span>Graphics Development (OpenGL)</li>
+              <li><span class="highlight-icon">🗣️</span>Multilingual (ES/EN/DE)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  <!-- Full CV View -->
-  <div id="full-cv" class="cv-content">
-    
-    <section class="cv-section reveal">
-      <h2 class="cv-section-title">Professional Summary</h2>
-      <div class="cv-summary">
-        <p>
-          Dedicated full-stack software developer with comprehensive expertise in systems programming (C, C++), scripting languages (Python, Bash), and web technologies (JavaScript, HTTP/1.1, CGI). Currently completing intensive training at 42 Vienna with hands-on experience in building production-grade software including HTTP servers with epoll-based I/O multiplexing, custom UNIX shells, and OpenGL graphics engines. Strong problem-solving abilities combined with multilingual communication skills (Spanish native, English C1, German A2/B1) and proven adaptability in international team environments. Seeking software developer role to contribute technical expertise in systems programming, backend development, network programming, or full-stack applications.
-        </p>
-      </div>
-    </section>
-
-    <!-- Section Divider -->
-    <div class="section-divider">
-      <div class="section-divider-line"></div>
-      <div class="section-divider-icon">🎓</div>
-      <div class="section-divider-line"></div>
-    </div>
-
-    <section class="cv-section reveal">
-      <h2 class="cv-section-title">Education</h2>
-      
-      <div class="cv-timeline">
-        <div class="cv-timeline-item" data-aos="fade-right">
-          <div class="cv-timeline-card">
-            <div class="cv-item-header">
-              <div>
-                <h3 class="cv-item-title">42 Vienna</h3>
-                <p class="cv-item-subtitle">Bachelor/RNCP 6 - Full Stack Software Developer</p>
-              </div>
-              <div class="cv-item-date" style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white;">In Progress</div>
+      <!-- Technical Skills -->
+      <section class="cv-section reveal" id="skills">
+        <div class="cv-section-header">
+          <div class="cv-section-icon">💻</div>
+          <h2 class="cv-section-title">Technical Skills</h2>
+        </div>
+        
+        <div class="cv-skills-grid">
+          <!-- Programming Languages -->
+          <div class="cv-skill-card">
+            <div class="cv-skill-card-header">
+              <span class="cv-skill-emoji">🔧</span>
+              <h3>Programming Languages</h3>
             </div>
-            <div class="cv-item-content">
-              <p class="cv-location">📍 Vienna, Austria</p>
-              <p>The curriculum at 42 emphasizes peer learning, where students evaluate each other's work, enhancing communication and teamwork skills. It covers a wide array of technical subjects, including programming languages, algorithms, system administration, and cybersecurity, while also developing essential soft skills like adaptability, problem-solving, and self-learning.</p>
-              <ul>
-                <li>Peer-to-peer learning methodology</li>
-                <li>Project-based curriculum</li>
-                <li>Focus on algorithms, system administration, and cybersecurity</li>
+            <div class="cv-skill-bars">
+              <div class="cv-skill-bar-item">
+                <div class="cv-skill-bar-info">
+                  <span class="cv-skill-name">C</span>
+                  <span class="cv-skill-level-badge expert">Expert</span>
+                </div>
+                <div class="cv-skill-bar">
+                  <div class="cv-skill-bar-fill expert" data-width="95"></div>
+                </div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <div class="cv-skill-bar-info">
+                  <span class="cv-skill-name">C++</span>
+                  <span class="cv-skill-level-badge expert">Expert</span>
+                </div>
+                <div class="cv-skill-bar">
+                  <div class="cv-skill-bar-fill expert" data-width="90"></div>
+                </div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <div class="cv-skill-bar-info">
+                  <span class="cv-skill-name">Python</span>
+                  <span class="cv-skill-level-badge proficient">Proficient</span>
+                </div>
+                <div class="cv-skill-bar">
+                  <div class="cv-skill-bar-fill proficient" data-width="85"></div>
+                </div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <div class="cv-skill-bar-info">
+                  <span class="cv-skill-name">Bash</span>
+                  <span class="cv-skill-level-badge proficient">Proficient</span>
+                </div>
+                <div class="cv-skill-bar">
+                  <div class="cv-skill-bar-fill proficient" data-width="85"></div>
+                </div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <div class="cv-skill-bar-info">
+                  <span class="cv-skill-name">JavaScript</span>
+                  <span class="cv-skill-level-badge proficient">Proficient</span>
+                </div>
+                <div class="cv-skill-bar">
+                  <div class="cv-skill-bar-fill proficient" data-width="80"></div>
+                </div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <div class="cv-skill-bar-info">
+                  <span class="cv-skill-name">HTML/CSS</span>
+                  <span class="cv-skill-level-badge intermediate">Intermediate</span>
+                </div>
+                <div class="cv-skill-bar">
+                  <div class="cv-skill-bar-fill intermediate" data-width="75"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Systems & DevOps -->
+          <div class="cv-skill-card">
+            <div class="cv-skill-card-header">
+              <span class="cv-skill-emoji">⚙️</span>
+              <h3>Systems & DevOps</h3>
+            </div>
+            <div class="cv-skill-tags">
+              <span class="cv-skill-tag expert">Linux/Unix</span>
+              <span class="cv-skill-tag expert">Git</span>
+              <span class="cv-skill-tag expert">GitHub</span>
+              <span class="cv-skill-tag proficient">Docker</span>
+              <span class="cv-skill-tag proficient">Makefile</span>
+              <span class="cv-skill-tag proficient">CMake</span>
+              <span class="cv-skill-tag proficient">Shell Scripting</span>
+              <span class="cv-skill-tag intermediate">GitHub Actions</span>
+              <span class="cv-skill-tag intermediate">CI/CD</span>
+              <span class="cv-skill-tag intermediate">Virtual Machines</span>
+            </div>
+          </div>
+
+          <!-- Web & Network -->
+          <div class="cv-skill-card">
+            <div class="cv-skill-card-header">
+              <span class="cv-skill-emoji">🌐</span>
+              <h3>Web & Network</h3>
+            </div>
+            <div class="cv-skill-tags">
+              <span class="cv-skill-tag proficient">HTTP/1.1</span>
+              <span class="cv-skill-tag proficient">CGI</span>
+              <span class="cv-skill-tag proficient">Socket Programming</span>
+              <span class="cv-skill-tag proficient">I/O Multiplexing</span>
+              <span class="cv-skill-tag proficient">epoll</span>
+              <span class="cv-skill-tag intermediate">RESTful APIs</span>
+              <span class="cv-skill-tag intermediate">Responsive Design</span>
+              <span class="cv-skill-tag intermediate">Jekyll</span>
+            </div>
+          </div>
+
+          <!-- Core Competencies -->
+          <div class="cv-skill-card">
+            <div class="cv-skill-card-header">
+              <span class="cv-skill-emoji">🎯</span>
+              <h3>Core Competencies</h3>
+            </div>
+            <div class="cv-skill-tags">
+              <span class="cv-skill-tag proficient">Algorithms</span>
+              <span class="cv-skill-tag proficient">Data Structures</span>
+              <span class="cv-skill-tag proficient">System Programming</span>
+              <span class="cv-skill-tag proficient">OpenGL</span>
+              <span class="cv-skill-tag proficient">SQL</span>
+              <span class="cv-skill-tag proficient">Debugging</span>
+              <span class="cv-skill-tag proficient">Testing & QA</span>
+              <span class="cv-skill-tag intermediate">Agile/Scrum</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="cv-soft-skills">
+          <h3 class="cv-subsection-title">Soft Skills</h3>
+          <div class="cv-soft-skills-grid">
+            <div class="cv-soft-skill-item">
+              <span class="cv-soft-skill-icon">📚</span>
+              <span class="cv-soft-skill-name">Self-Learning</span>
+            </div>
+            <div class="cv-soft-skill-item">
+              <span class="cv-soft-skill-icon">⏰</span>
+              <span class="cv-soft-skill-name">Time Management</span>
+            </div>
+            <div class="cv-soft-skill-item">
+              <span class="cv-soft-skill-icon">🧠</span>
+              <span class="cv-soft-skill-name">Critical Thinking</span>
+            </div>
+            <div class="cv-soft-skill-item">
+              <span class="cv-soft-skill-icon">🔄</span>
+              <span class="cv-soft-skill-name">Adaptability</span>
+            </div>
+            <div class="cv-soft-skill-item">
+              <span class="cv-soft-skill-icon">💬</span>
+              <span class="cv-soft-skill-name">Communication</span>
+            </div>
+            <div class="cv-soft-skill-item">
+              <span class="cv-soft-skill-icon">👥</span>
+              <span class="cv-soft-skill-name">Team Collaboration</span>
+            </div>
+            <div class="cv-soft-skill-item">
+              <span class="cv-soft-skill-icon">💪</span>
+              <span class="cv-soft-skill-name">Resilience</span>
+            </div>
+            <div class="cv-soft-skill-item">
+              <span class="cv-soft-skill-icon">🔍</span>
+              <span class="cv-soft-skill-name">Attention to Detail</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Experience -->
+      <section class="cv-section reveal" id="experience">
+        <div class="cv-section-header">
+          <div class="cv-section-icon">💼</div>
+          <h2 class="cv-section-title">Professional Experience</h2>
+        </div>
+        
+        <div class="cv-experience-timeline">
+          <div class="cv-experience-item">
+            <div class="cv-experience-marker"></div>
+            <div class="cv-experience-content">
+              <div class="cv-experience-header">
+                <div class="cv-experience-title-group">
+                  <h3 class="cv-experience-title">Community Host</h3>
+                  <p class="cv-experience-company">The Social Hub</p>
+                </div>
+                <div class="cv-experience-meta">
+                  <span class="cv-experience-date">May 2024 – Sep 2024</span>
+                  <span class="cv-experience-type">Full-Time</span>
+                </div>
+              </div>
+              <p class="cv-experience-location">📍 Vienna, Austria</p>
+              <ul class="cv-experience-achievements">
+                <li><strong>Led front-of-house operations</strong> coordinating with staff to deliver exceptional guest experiences across check-in, restaurant, bar service, and community engagement</li>
+                <li><strong>Achieved consistently positive feedback</strong> providing multilingual service (English, German, Spanish) in high-pressure hospitality settings</li>
+                <li><strong>Managed large-scale events</strong> efficiently handling 500+ guests simultaneously while maintaining smooth operations and high satisfaction rates</li>
+                <li><strong>Demonstrated rapid problem-solving</strong> resolving guest and team issues quickly to maintain service quality standards</li>
+                <li><strong>Fostered team collaboration</strong> supporting colleagues and promoting a motivated, cohesive work environment</li>
               </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="cv-timeline-item" data-aos="fade-right" data-aos-delay="100">
-          <div class="cv-timeline-card">
-            <div class="cv-item-header">
-              <div>
-                <h3 class="cv-item-title">Universidad de Palermo</h3>
-                <p class="cv-item-subtitle">Bachelor in System Analytics</p>
+              <div class="cv-experience-skills">
+                <span>Leadership</span>
+                <span>Customer Service</span>
+                <span>Multilingual Communication</span>
+                <span>Problem Resolution</span>
               </div>
-              <div class="cv-item-date">2023</div>
-            </div>
-            <div class="cv-item-content">
-              <p class="cv-location">📍 Buenos Aires, Argentina (Online)</p>
             </div>
           </div>
-        </div>
 
-        <div class="cv-timeline-item" data-aos="fade-right" data-aos-delay="200">
-          <div class="cv-timeline-card">
-            <div class="cv-item-header">
-              <div>
-                <h3 class="cv-item-title">E.S.R.N 123</h3>
-                <p class="cv-item-subtitle">High School Diploma - Specialized in Natural Sciences</p>
+          <div class="cv-experience-item">
+            <div class="cv-experience-marker"></div>
+            <div class="cv-experience-content">
+              <div class="cv-experience-header">
+                <div class="cv-experience-title-group">
+                  <h3 class="cv-experience-title">Bartender / Barista / Cook / Waiter</h3>
+                  <p class="cv-experience-company">DIE SCHANKWIRTSCHAFT im AUGARTEN</p>
+                </div>
+                <div class="cv-experience-meta">
+                  <span class="cv-experience-date">Apr 2022 – Sep 2023</span>
+                  <span class="cv-experience-type">Part-Time</span>
+                </div>
               </div>
-              <div class="cv-item-date">2019</div>
+              <p class="cv-experience-location">📍 Vienna, Austria</p>
+              <ul class="cv-experience-achievements">
+                <li><strong>Multi-role versatility</strong> – Performed diverse responsibilities including bartending, barista duties, cooking, and table service</li>
+                <li><strong>Efficient process management</strong> – Maintained clear and uninterrupted workflow during peak service hours</li>
+                <li><strong>Quality preparation</strong> – Prepared drinks and food items on demand while meeting quality standards</li>
+                <li><strong>Operational excellence</strong> – Handled setup, cleaning, restocking, and end-of-day account closing procedures</li>
+              </ul>
+              <div class="cv-experience-skills">
+                <span>Multi-tasking</span>
+                <span>Time Management</span>
+                <span>Quality Control</span>
+                <span>Cash Handling</span>
+              </div>
             </div>
-            <div class="cv-item-content">
-              <p class="cv-location">📍 Bariloche, Rio Negro, Patagonia, Argentina</p>
+          </div>
+
+          <div class="cv-experience-item">
+            <div class="cv-experience-marker"></div>
+            <div class="cv-experience-content">
+              <div class="cv-experience-header">
+                <div class="cv-experience-title-group">
+                  <h3 class="cv-experience-title">Food Delivery Courier</h3>
+                  <p class="cv-experience-company">Takeaway.at</p>
+                </div>
+                <div class="cv-experience-meta">
+                  <span class="cv-experience-date">Sep 2021 – Nov 2022</span>
+                  <span class="cv-experience-type">Part-Time</span>
+                </div>
+              </div>
+              <p class="cv-experience-location">📍 Vienna, Austria</p>
+              <ul class="cv-experience-achievements">
+                <li><strong>Route optimization</strong> – Developed efficient navigation and route planning skills for timely deliveries</li>
+                <li><strong>Customer-focused service</strong> – Maintained professionalism and positive interactions with customers</li>
+                <li><strong>Self-management</strong> – Demonstrated independence, physical stamina, and organizational abilities</li>
+              </ul>
+              <div class="cv-experience-skills">
+                <span>Navigation</span>
+                <span>Time Management</span>
+                <span>Customer Service</span>
+                <span>Independence</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Section Divider -->
-    <div class="section-divider">
-      <div class="section-divider-line"></div>
-      <div class="section-divider-icon">💻</div>
-      <div class="section-divider-line"></div>
+      <!-- Education -->
+      <section class="cv-section reveal" id="education">
+        <div class="cv-section-header">
+          <div class="cv-section-icon">🎓</div>
+          <h2 class="cv-section-title">Education</h2>
+        </div>
+        
+        <div class="cv-education-grid">
+          <div class="cv-education-card cv-education-featured">
+            <div class="cv-education-badge">In Progress</div>
+            <div class="cv-education-content">
+              <div class="cv-education-icon">🏫</div>
+              <h3 class="cv-education-school">42 Vienna</h3>
+              <p class="cv-education-degree">Bachelor/RNCP 6 – Full Stack Software Developer</p>
+              <p class="cv-education-location">📍 Vienna, Austria</p>
+              <div class="cv-education-details">
+                <p>Intensive peer-to-peer learning program emphasizing practical software development skills through project-based curriculum.</p>
+                <ul>
+                  <li>Systems Programming (C, C++)</li>
+                  <li>Web Development & Network Programming</li>
+                  <li>Algorithms & Data Structures</li>
+                  <li>DevOps & System Administration</li>
+                  <li>Peer Code Review & Collaboration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-education-card">
+            <div class="cv-education-content">
+              <div class="cv-education-icon">🎓</div>
+              <h3 class="cv-education-school">Universidad de Palermo</h3>
+              <p class="cv-education-degree">Bachelor in System Analytics</p>
+              <p class="cv-education-location">📍 Buenos Aires, Argentina (Online)</p>
+              <p class="cv-education-year">2023</p>
+            </div>
+          </div>
+
+          <div class="cv-education-card">
+            <div class="cv-education-content">
+              <div class="cv-education-icon">📚</div>
+              <h3 class="cv-education-school">E.S.R.N 123</h3>
+              <p class="cv-education-degree">High School Diploma – Natural Sciences</p>
+              <p class="cv-education-location">📍 Bariloche, Patagonia, Argentina</p>
+              <p class="cv-education-year">2019</p>
+            </div>
+          </div>
+
+          <div class="cv-education-card cv-certification-card">
+            <div class="cv-education-content">
+              <div class="cv-education-icon">🏆</div>
+              <h3 class="cv-education-school">IBA Certificate</h3>
+              <p class="cv-education-degree">International Bartender Association</p>
+              <p class="cv-education-year">2019</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Languages -->
+      <section class="cv-section reveal" id="languages">
+        <div class="cv-section-header">
+          <div class="cv-section-icon">🌍</div>
+          <h2 class="cv-section-title">Languages</h2>
+        </div>
+        
+        <div class="cv-languages-grid">
+          <div class="cv-language-card">
+            <div class="cv-language-flag">🇪🇸</div>
+            <div class="cv-language-info">
+              <h3 class="cv-language-name">Spanish</h3>
+              <span class="cv-language-level native">Native</span>
+            </div>
+            <div class="cv-language-bar">
+              <div class="cv-language-bar-fill" style="width: 100%"></div>
+            </div>
+          </div>
+
+          <div class="cv-language-card">
+            <div class="cv-language-flag">🇬🇧</div>
+            <div class="cv-language-info">
+              <h3 class="cv-language-name">English</h3>
+              <span class="cv-language-level advanced">C1 Advanced</span>
+            </div>
+            <div class="cv-language-bar">
+              <div class="cv-language-bar-fill" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="cv-language-card">
+            <div class="cv-language-flag">🇩🇪</div>
+            <div class="cv-language-info">
+              <h3 class="cv-language-name">German</h3>
+              <span class="cv-language-level intermediate">A2/B1</span>
+            </div>
+            <div class="cv-language-bar">
+              <div class="cv-language-bar-fill" style="width: 50%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Interests -->
+        <div class="cv-interests">
+          <h3 class="cv-subsection-title">Professional Interests</h3>
+          <div class="cv-interests-grid">
+            <div class="cv-interest-item">
+              <span class="cv-interest-icon">🔒</span>
+              <span>Cybersecurity</span>
+            </div>
+            <div class="cv-interest-item">
+              <span class="cv-interest-icon">🚀</span>
+              <span>Emerging Technologies</span>
+            </div>
+            <div class="cv-interest-item">
+              <span class="cv-interest-icon">🌐</span>
+              <span>Network Programming</span>
+            </div>
+            <div class="cv-interest-item">
+              <span class="cv-interest-icon">⚙️</span>
+              <span>System Administration</span>
+            </div>
+            <div class="cv-interest-item">
+              <span class="cv-interest-icon">🎮</span>
+              <span>Graphics Programming</span>
+            </div>
+            <div class="cv-interest-item">
+              <span class="cv-interest-icon">📊</span>
+              <span>Backend Development</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download Section -->
+      <section class="cv-section cv-download-section reveal" id="download">
+        <div class="cv-section-header">
+          <div class="cv-section-icon">📄</div>
+          <h2 class="cv-section-title">Download CV</h2>
+        </div>
+        
+        <div class="cv-download-content">
+          <div class="cv-download-card">
+            <div class="cv-download-icon">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14,2 14,8 20,8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10,9 9,9 8,9"/>
+              </svg>
+            </div>
+            <h3>PDF Version</h3>
+            <p>Download my complete CV in PDF format for offline viewing or printing.</p>
+            <a href="assets/documents/cv.pdf" class="cv-download-btn" download="Valentino_Garcia_Susini_CV.pdf">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7,10 12,15 17,10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download PDF
+            </a>
+          </div>
+          
+          <div class="cv-pdf-preview">
+            <iframe src="assets/documents/cv.pdf" title="Valentino Garcia Susini CV PDF Document" loading="lazy" role="document" aria-label="CV PDF preview">
+              <p>Your browser does not support PDF viewing. <a href="assets/documents/cv.pdf" download>Download the PDF</a> to view it.</p>
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="cv-cta reveal">
+        <div class="cv-cta-content">
+          <h2>Let's Work Together</h2>
+          <p>I'm actively seeking software developer opportunities where I can contribute my technical expertise and continue growing as a professional.</p>
+          <div class="cv-cta-buttons">
+            <a href="mailto:valentinogsusini@gmail.com" class="cv-cta-btn cv-cta-primary">
+              <span>📧</span> Get in Touch
+            </a>
+            <a href="https://linkedin.com/in/valentinogs" class="cv-cta-btn cv-cta-secondary" target="_blank" rel="noopener noreferrer">
+              <span>💼</span> Connect on LinkedIn
+            </a>
+            <a href="index.html#projects" class="cv-cta-btn cv-cta-secondary">
+              <span>🚀</span> View Projects
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
-
-    <section class="cv-section reveal">
-      <h2 class="cv-section-title">Technical Skills</h2>
-      
-      <!-- Interactive Skill Progress Bars -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-xl);">
-        <div class="skill-category glass-card" style="padding: var(--space-xl); border-radius: var(--radius-xl);">
-          <h4 style="margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-sm);">
-            <span style="font-size: 1.5rem;">🔧</span> Programming Languages
-          </h4>
-          
-          <div class="skill-progress-container">
-            <div class="skill-progress-header">
-              <span class="skill-progress-name">C</span>
-              <span class="skill-progress-level">Expert • 95%</span>
-            </div>
-            <div class="skill-progress-bar">
-              <div class="skill-progress-fill expert" data-width="95"></div>
-            </div>
-          </div>
-          
-          <div class="skill-progress-container">
-            <div class="skill-progress-header">
-              <span class="skill-progress-name">C++</span>
-              <span class="skill-progress-level">Expert • 90%</span>
-            </div>
-            <div class="skill-progress-bar">
-              <div class="skill-progress-fill expert" data-width="90"></div>
-            </div>
-          </div>
-          
-          <div class="skill-progress-container">
-            <div class="skill-progress-header">
-              <span class="skill-progress-name">Python</span>
-              <span class="skill-progress-level">Proficient • 85%</span>
-            </div>
-            <div class="skill-progress-bar">
-              <div class="skill-progress-fill proficient" data-width="85"></div>
-            </div>
-          </div>
-          
-          <div class="skill-progress-container">
-            <div class="skill-progress-header">
-              <span class="skill-progress-name">JavaScript</span>
-              <span class="skill-progress-level">Proficient • 80%</span>
-            </div>
-            <div class="skill-progress-bar">
-              <div class="skill-progress-fill proficient" data-width="80"></div>
-            </div>
-          </div>
-          
-          <div class="skill-progress-container">
-            <div class="skill-progress-header">
-              <span class="skill-progress-name">Bash</span>
-              <span class="skill-progress-level">Proficient • 85%</span>
-            </div>
-            <div class="skill-progress-bar">
-              <div class="skill-progress-fill proficient" data-width="85"></div>
-            </div>
-          </div>
-          
-          <div class="skill-progress-container">
-            <div class="skill-progress-header">
-              <span class="skill-progress-name">HTML/CSS</span>
-              <span class="skill-progress-level">Intermediate • 75%</span>
-            </div>
-            <div class="skill-progress-bar">
-              <div class="skill-progress-fill intermediate" data-width="75"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category glass-card" style="padding: var(--space-xl); border-radius: var(--radius-xl);">
-          <h4 style="margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-sm);">
-            <span style="font-size: 1.5rem;">⚙️</span> Systems & Tools
-          </h4>
-          <div class="skill-items" style="display: flex; flex-wrap: wrap; gap: var(--space-sm);">
-            <span class="skill-badge expert animate-pulse-hover">Linux/Unix CLI</span>
-            <span class="skill-badge expert animate-pulse-hover">Git & GitHub</span>
-            <span class="skill-badge proficient animate-pulse-hover">Shell Scripting</span>
-            <span class="skill-badge proficient animate-pulse-hover">Docker</span>
-            <span class="skill-badge proficient animate-pulse-hover">Virtual Machines</span>
-            <span class="skill-badge proficient animate-pulse-hover">Makefile</span>
-            <span class="skill-badge proficient animate-pulse-hover">CMake</span>
-            <span class="skill-badge intermediate animate-pulse-hover">GitHub Actions</span>
-            <span class="skill-badge intermediate animate-pulse-hover">Jekyll</span>
-          </div>
-        </div>
-
-        <div class="skill-category glass-card" style="padding: var(--space-xl); border-radius: var(--radius-xl);">
-          <h4 style="margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-sm);">
-            <span style="font-size: 1.5rem;">🌐</span> Web & Network
-          </h4>
-          <div class="skill-items" style="display: flex; flex-wrap: wrap; gap: var(--space-sm);">
-            <span class="skill-badge proficient animate-pulse-hover">HTTP/1.1 Protocol</span>
-            <span class="skill-badge proficient animate-pulse-hover">CGI</span>
-            <span class="skill-badge proficient animate-pulse-hover">Network Programming</span>
-            <span class="skill-badge proficient animate-pulse-hover">I/O Multiplexing</span>
-            <span class="skill-badge proficient animate-pulse-hover">epoll</span>
-            <span class="skill-badge intermediate animate-pulse-hover">RESTful APIs</span>
-            <span class="skill-badge intermediate animate-pulse-hover">GitHub Pages</span>
-            <span class="skill-badge intermediate animate-pulse-hover">Responsive Design</span>
-          </div>
-        </div>
-
-        <div class="skill-category glass-card" style="padding: var(--space-xl); border-radius: var(--radius-xl);">
-          <h4 style="margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-sm);">
-            <span style="font-size: 1.5rem;">🎯</span> Core Competencies
-          </h4>
-          <div class="skill-items" style="display: flex; flex-wrap: wrap; gap: var(--space-sm);">
-            <span class="skill-badge proficient animate-pulse-hover">Algorithms & Data Structures</span>
-            <span class="skill-badge proficient animate-pulse-hover">System Programming</span>
-            <span class="skill-badge proficient animate-pulse-hover">Graphics (OpenGL)</span>
-            <span class="skill-badge proficient animate-pulse-hover">SQL</span>
-            <span class="skill-badge proficient animate-pulse-hover">Debugging</span>
-            <span class="skill-badge proficient animate-pulse-hover">Testing & QA</span>
-            <span class="skill-badge proficient animate-pulse-hover">Agile</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Skill Level Legend -->
-      <div style="display: flex; justify-content: center; gap: var(--space-xl); flex-wrap: wrap; padding: var(--space-md); background: var(--bg-secondary); border-radius: var(--radius-lg);">
-        <div style="display: flex; align-items: center; gap: var(--space-xs);">
-          <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #06b6d4);"></div>
-          <span style="font-size: 0.875rem; color: var(--text-secondary);">Expert (90%+)</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: var(--space-xs);">
-          <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #34d399);"></div>
-          <span style="font-size: 0.875rem; color: var(--text-secondary);">Proficient (80%+)</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: var(--space-xs);">
-          <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #f59e0b, #fbbf24);"></div>
-          <span style="font-size: 0.875rem; color: var(--text-secondary);">Intermediate (70%+)</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section Divider -->
-    <div class="section-divider">
-      <div class="section-divider-line"></div>
-      <div class="section-divider-icon">🤝</div>
-      <div class="section-divider-line"></div>
-    </div>
-
-    <section class="cv-section reveal">
-      <h2 class="cv-section-title">Soft Skills</h2>
-      <div class="skill-radar">
-        <div class="skill-radar-item">
-          <span class="skill-radar-icon">📚</span>
-          <div class="skill-radar-name">Self-Directed Learning</div>
-          <div class="skill-radar-level">Continuous growth mindset</div>
-        </div>
-        <div class="skill-radar-item">
-          <span class="skill-radar-icon">⏰</span>
-          <div class="skill-radar-name">Time Management</div>
-          <div class="skill-radar-level">Efficient prioritization</div>
-        </div>
-        <div class="skill-radar-item">
-          <span class="skill-radar-icon">🧠</span>
-          <div class="skill-radar-name">Critical Thinking</div>
-          <div class="skill-radar-level">Analytical problem solver</div>
-        </div>
-        <div class="skill-radar-item">
-          <span class="skill-radar-icon">🔄</span>
-          <div class="skill-radar-name">Adaptability</div>
-          <div class="skill-radar-level">Quick to learn new tools</div>
-        </div>
-        <div class="skill-radar-item">
-          <span class="skill-radar-icon">📋</span>
-          <div class="skill-radar-name">Project Planning</div>
-          <div class="skill-radar-level">Organized execution</div>
-        </div>
-        <div class="skill-radar-item">
-          <span class="skill-radar-icon">💪</span>
-          <div class="skill-radar-name">Resilience</div>
-          <div class="skill-radar-level">Perseverance under pressure</div>
-        </div>
-        <div class="skill-radar-item">
-          <span class="skill-radar-icon">💬</span>
-          <div class="skill-radar-name">Communication</div>
-          <div class="skill-radar-level">Clear & multilingual</div>
-        </div>
-        <div class="skill-radar-item">
-          <span class="skill-radar-icon">👥</span>
-          <div class="skill-radar-name">Team Collaboration</div>
-          <div class="skill-radar-level">Conflict resolution</div>
-        </div>
-        <div class="skill-radar-item">
-          <span class="skill-radar-icon">🔍</span>
-          <div class="skill-radar-name">Attention to Detail</div>
-          <div class="skill-radar-level">Code quality focus</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cv-section">
-      <h2 class="cv-section-title">Professional Experience</h2>
-      
-      <div class="cv-item">
-        <div class="cv-item-header">
-          <div>
-            <h3 class="cv-item-title">Community Host</h3>
-            <p class="cv-item-subtitle">The Social Hub</p>
-          </div>
-          <div class="cv-item-date">05/2024 - 09/2024</div>
-        </div>
-        <div class="cv-item-content">
-          <p class="cv-location">Vienna, Austria (Full-Time)</p>
-          <ul>
-            <li>Supervised and worked closely with front-of-house staff to deliver great guest experiences, ensuring seamless check-ins, restaurant/bar service, and community engagement</li>
-            <li>Provided high-quality service in restaurant and bar settings, achieving consistently positive guest feedback in English, German, and Spanish</li>
-            <li>Effectively handled over 500 guests at once, ensuring smooth operations and high satisfaction</li>
-            <li>Solved guest and team issues or complaints quickly, maintaining service quality</li>
-            <li>Helped colleagues with challenges, promoting a collaborative and motivated team</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="cv-item">
-        <div class="cv-item-header">
-          <div>
-            <h3 class="cv-item-title">Bartender - Barista - Cook - Waiter</h3>
-            <p class="cv-item-subtitle">DIE SCHANKWIRTSCHAFT im AUGARTEN</p>
-          </div>
-          <div class="cv-item-date">04/2022 - 09/2023</div>
-        </div>
-        <div class="cv-item-content">
-          <p class="cv-location">Vienna, Austria (Part-Time)</p>
-          <ul>
-            <li>Clear and uninterrupted process handling</li>
-            <li>Preparing drinks and food on demand</li>
-            <li>Set up, cleaning and restocking</li>
-            <li>Account closing at end of day</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="cv-item">
-        <div class="cv-item-header">
-          <div>
-            <h3 class="cv-item-title">Food Delivery Courier</h3>
-            <p class="cv-item-subtitle">Takeaway.at</p>
-          </div>
-          <div class="cv-item-date">09/2021 - 11/2022</div>
-        </div>
-        <div class="cv-item-content">
-          <p class="cv-location">Vienna, Austria (Part-Time)</p>
-          <p><strong>Skills Developed:</strong> Time Management, Customer Service, Navigation & Route Planning, Problem-Solving, Physical Stamina & Organization, Attention to Detail</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="cv-section">
-      <h2 class="cv-section-title">Certifications</h2>
-      <div class="cv-item">
-        <div class="cv-item-header">
-          <div>
-            <h3 class="cv-item-title">IBA Certificate</h3>
-            <p class="cv-item-subtitle">International Bartender Association</p>
-          </div>
-          <div class="cv-item-date">2019</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cv-section">
-      <h2 class="cv-section-title">Languages</h2>
-      <div class="languages-grid">
-        <div class="language-item">
-          <strong>Spanish</strong>
-          <span class="proficiency">Native (Mother tongue)</span>
-        </div>
-        <div class="language-item">
-          <strong>English</strong>
-          <span class="proficiency">Advanced (C1)</span>
-        </div>
-        <div class="language-item">
-          <strong>German</strong>
-          <span class="proficiency">Intermediate (A2/B1)</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="cv-section">
-      <h2 class="cv-section-title">Professional Interests</h2>
-      <div class="interests-list">
-        <ul>
-          <li>Cybersecurity</li>
-          <li>Emerging Technologies</li>
-          <li>Software Development</li>
-          <li>System Administration</li>
-        </ul>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- PDF Embed Section -->
-  <section class="cv-section pdf-section">
-    <h2 class="cv-section-title">PDF Version</h2>
-    <div class="pdf-download-notice">
-      <p>📄 View the complete PDF version of my CV below, or download it for offline viewing.</p>
-      <a href="assets/documents/cv.pdf" class="btn btn-primary" download="Valentino_Garcia_Susini_CV.pdf">
-        <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-          <path d="M8 12l-4-4h3V0h2v8h3l-4 4z"/>
-          <path d="M0 14h16v2H0z"/>
-        </svg>
-        Download PDF Version
-      </a>
-    </div>
-    <div class="pdf-viewer">
-      <iframe src="assets/documents/cv.pdf" width="100%" height="800px" style="border: none; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);" title="Valentino Garcia Susini CV PDF Document">
-        <p>Your browser does not support PDF viewing. <a href="assets/documents/cv.pdf" download="Valentino_Garcia_Susini_CV.pdf" class="btn btn-primary">Download the CV PDF</a> to view it offline.</p>
-      </iframe>
-    </div>
-  </section>
-
-</div>
   </main>
   
   <footer class="site-footer">
