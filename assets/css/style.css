@@ -950,6 +950,17 @@ section[id] {
 
 .focus-item {
   text-align: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.focus-item:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .focus-item strong {
@@ -1944,6 +1955,16 @@ section[id] {
   color: var(--text-secondary);
   font-weight: 500;
   font-size: 0.9rem;
+}
+
+.stat-item-highlight {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  box-shadow: var(--shadow-md);
+}
+
+.stat-item-highlight .stat-text {
+  color: white;
+  font-weight: 600;
 }
 
 /* ========================================

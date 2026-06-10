@@ -11,11 +11,13 @@ const translations = {
     "hero": {
       "greeting": "Hi, I'm",
       "title": "Full-Stack Software Developer",
-      "description1": "I am a dedicated full-stack software developer nearing completion of my studies at 42 Vienna, with strong expertise in systems programming (C, C++), scripting (Python, Bash), and web technologies (JavaScript, HTTP, CGI).",
+      "description1": "I am a dedicated full-stack software developer and a 42 Vienna Common Core graduate, with strong expertise in systems programming (C, C++), scripting (Python, Bash), and web technologies (JavaScript, HTTP, CGI).",
       "description2": "My hands-on experience includes building HTTP servers from scratch, implementing custom shells, developing graphics engines with OpenGL, and creating sophisticated file system tools. With a keen interest in cybersecurity, network programming, and emerging technologies, I bring both technical depth and practical problem-solving skills. My multilingual abilities (Spanish, English, German) and diverse professional background enable me to thrive in international teams and adapt quickly to new challenges.",
       "location": "Vienna, Austria",
       "citizenship": "Italian & Argentine Citizen",
       "availability": "Open to Opportunities",
+      "gradBadge": "42 Common Core Graduate",
+      "hackathonBadge": "2nd Place — Zero One Hackathon",
       "viewCV": "View My CV",
       "seeProjects": "See Projects",
       "getInTouch": "Get in Touch"
@@ -40,7 +42,7 @@ const translations = {
     },
     "education": {
       "title": "Education",
-      "inProgress": "In Progress",
+      "inProgress": "Common Core Completed",
       "school42": "42 Vienna",
       "school42Degree": "Bachelor/RNCP 6 - Full Stack Software Developer",
       "school42Desc": "The curriculum at 42 emphasizes peer learning, where students evaluate each other's work, enhancing communication and teamwork skills. It covers a wide array of technical subjects, including programming languages, algorithms, system administration, and cybersecurity.",
@@ -78,10 +80,10 @@ const translations = {
     },
     "focus": {
       "title": "Current Focus",
-      "item1Title": "🔥 Completing 42 School Curriculum",
-      "item1Desc": "Building expertise in full-stack development",
-      "item2Title": "💼 Seeking Software Developer Opportunities",
-      "item2Desc": "Ready to contribute and grow in a professional environment",
+      "item1Title": "🎓 42 School Common Core Completed",
+      "item1Desc": "Full curriculum finished — from systems programming in C to full-stack web development",
+      "item2Title": "🥈 2nd Place — Zero One Supercomputing Hackathon",
+      "item2Desc": "Earned an internship through the hackathon win — starting my first industry role",
       "item3Title": "🌱 Exploring Cybersecurity & Emerging Technologies",
       "item3Desc": "Passionate about innovative solutions"
     },
@@ -107,11 +109,13 @@ const translations = {
     "hero": {
       "greeting": "Hola, soy",
       "title": "Desarrollador de Software Full-Stack",
-      "description1": "Soy un desarrollador de software full-stack dedicado que está por completar mis estudios en 42 Viena, con fuerte experiencia en programación de sistemas (C, C++), scripting (Python, Bash) y tecnologías web (JavaScript, HTTP, CGI).",
+      "description1": "Soy un desarrollador de software full-stack dedicado y graduado del Common Core de 42 Viena, con fuerte experiencia en programación de sistemas (C, C++), scripting (Python, Bash) y tecnologías web (JavaScript, HTTP, CGI).",
       "description2": "Mi experiencia práctica incluye la construcción de servidores HTTP desde cero, implementación de shells personalizados, desarrollo de motores gráficos con OpenGL y creación de sofisticadas herramientas de sistema de archivos. Con un gran interés en ciberseguridad, programación de redes y tecnologías emergentes, aporto tanto profundidad técnica como habilidades prácticas de resolución de problemas. Mis habilidades multilingües (español, inglés, alemán) y mi diverso trasfondo profesional me permiten prosperar en equipos internacionales y adaptarme rápidamente a nuevos desafíos.",
       "location": "Viena, Austria",
       "citizenship": "Ciudadano Italiano y Argentino",
       "availability": "Abierto a Oportunidades",
+      "gradBadge": "Graduado del Common Core de 42",
+      "hackathonBadge": "2° Puesto — Zero One Hackathon",
       "viewCV": "Ver Mi CV",
       "seeProjects": "Ver Proyectos",
       "getInTouch": "Contactar"
@@ -136,7 +140,7 @@ const translations = {
     },
     "education": {
       "title": "Educación",
-      "inProgress": "En Curso",
+      "inProgress": "Common Core Completado",
       "school42": "42 Viena",
       "school42Degree": "Licenciatura/RNCP 6 - Desarrollador de Software Full Stack",
       "school42Desc": "El plan de estudios en 42 enfatiza el aprendizaje entre pares, donde los estudiantes evalúan el trabajo de los demás, mejorando las habilidades de comunicación y trabajo en equipo. Cubre una amplia gama de temas técnicos, incluyendo lenguajes de programación, algoritmos, administración de sistemas y ciberseguridad.",
@@ -174,10 +178,10 @@ const translations = {
     },
     "focus": {
       "title": "Enfoque Actual",
-      "item1Title": "🔥 Completando el Plan de Estudios de la Escuela 42",
-      "item1Desc": "Construyendo experiencia en desarrollo full-stack",
-      "item2Title": "💼 Buscando Oportunidades como Desarrollador de Software",
-      "item2Desc": "Listo para contribuir y crecer en un entorno profesional",
+      "item1Title": "🎓 Common Core de la Escuela 42 Completado",
+      "item1Desc": "Plan de estudios completo — desde programación de sistemas en C hasta desarrollo web full-stack",
+      "item2Title": "🥈 2° Puesto — Zero One Supercomputing Hackathon",
+      "item2Desc": "Conseguí una pasantía gracias al hackathon — comenzando mi primer rol en la industria",
       "item3Title": "🌱 Explorando Ciberseguridad y Tecnologías Emergentes",
       "item3Desc": "Apasionado por soluciones innovadoras"
     },
@@ -203,11 +207,13 @@ const translations = {
     "hero": {
       "greeting": "Hallo, ich bin",
       "title": "Full-Stack Softwareentwickler",
-      "description1": "Ich bin ein engagierter Full-Stack-Softwareentwickler, der kurz vor dem Abschluss seines Studiums an der 42 Wien steht, mit starker Expertise in Systemprogrammierung (C, C++), Scripting (Python, Bash) und Webtechnologien (JavaScript, HTTP, CGI).",
+      "description1": "Ich bin ein engagierter Full-Stack-Softwareentwickler und Absolvent des Common Core der 42 Wien, mit starker Expertise in Systemprogrammierung (C, C++), Scripting (Python, Bash) und Webtechnologien (JavaScript, HTTP, CGI).",
       "description2": "Meine praktische Erfahrung umfasst den Aufbau von HTTP-Servern von Grund auf, die Implementierung benutzerdefinierter Shells, die Entwicklung von Grafik-Engines mit OpenGL und die Erstellung ausgeklügelter Dateisystem-Tools. Mit großem Interesse an Cybersicherheit, Netzwerkprogrammierung und neuen Technologien bringe ich sowohl technische Tiefe als auch praktische Problemlösungsfähigkeiten mit. Meine mehrsprachigen Fähigkeiten (Spanisch, Englisch, Deutsch) und mein vielfältiger beruflicher Hintergrund ermöglichen es mir, in internationalen Teams erfolgreich zu sein und mich schnell an neue Herausforderungen anzupassen.",
       "location": "Wien, Österreich",
       "citizenship": "Italienischer & Argentinischer Staatsbürger",
       "availability": "Offen für Möglichkeiten",
+      "gradBadge": "42 Common Core Absolvent",
+      "hackathonBadge": "2. Platz — Zero One Hackathon",
       "viewCV": "Meinen Lebenslauf Ansehen",
       "seeProjects": "Projekte Ansehen",
       "getInTouch": "Kontaktieren"
@@ -232,7 +238,7 @@ const translations = {
     },
     "education": {
       "title": "Bildung",
-      "inProgress": "In Bearbeitung",
+      "inProgress": "Common Core Abgeschlossen",
       "school42": "42 Wien",
       "school42Degree": "Bachelor/RNCP 6 - Full Stack Softwareentwickler",
       "school42Desc": "Das Curriculum bei 42 betont Peer-Learning, bei dem Studenten die Arbeit des anderen bewerten und dabei Kommunikations- und Teamfähigkeiten verbessern. Es deckt ein breites Spektrum technischer Themen ab, einschließlich Programmiersprachen, Algorithmen, Systemadministration und Cybersicherheit.",
@@ -270,10 +276,10 @@ const translations = {
     },
     "focus": {
       "title": "Aktueller Fokus",
-      "item1Title": "🔥 Abschluss des 42 School Curriculums",
-      "item1Desc": "Aufbau von Expertise in Full-Stack-Entwicklung",
-      "item2Title": "💼 Suche nach Softwareentwickler-Möglichkeiten",
-      "item2Desc": "Bereit, in einer professionellen Umgebung beizutragen und zu wachsen",
+      "item1Title": "🎓 42 School Common Core Abgeschlossen",
+      "item1Desc": "Gesamtes Curriculum abgeschlossen — von Systemprogrammierung in C bis Full-Stack-Webentwicklung",
+      "item2Title": "🥈 2. Platz — Zero One Supercomputing Hackathon",
+      "item2Desc": "Durch den Hackathon-Erfolg ein Praktikum erhalten — Start in meine erste Industrierolle",
       "item3Title": "🌱 Erkundung von Cybersicherheit & neuen Technologien",
       "item3Desc": "Leidenschaftlich für innovative Lösungen"
     },
@@ -299,11 +305,13 @@ const translations = {
     "hero": {
       "greeting": "Ciao, sono",
       "title": "Sviluppatore Software Full-Stack",
-      "description1": "Sono uno sviluppatore software full-stack dedicato che sta per completare i miei studi a 42 Vienna, con forte competenza in programmazione di sistemi (C, C++), scripting (Python, Bash) e tecnologie web (JavaScript, HTTP, CGI).",
+      "description1": "Sono uno sviluppatore software full-stack dedicato e diplomato del Common Core di 42 Vienna, con forte competenza in programmazione di sistemi (C, C++), scripting (Python, Bash) e tecnologie web (JavaScript, HTTP, CGI).",
       "description2": "La mia esperienza pratica include la costruzione di server HTTP da zero, l'implementazione di shell personalizzate, lo sviluppo di motori grafici con OpenGL e la creazione di sofisticati strumenti per file system. Con un forte interesse per la cybersicurezza, la programmazione di rete e le tecnologie emergenti, porto sia profondità tecnica che capacità pratiche di problem solving. Le mie abilità multilingue (spagnolo, inglese, tedesco) e il mio diverso background professionale mi permettono di prosperare in team internazionali e di adattarmi rapidamente a nuove sfide.",
       "location": "Vienna, Austria",
       "citizenship": "Cittadino Italiano e Argentino",
       "availability": "Aperto a Opportunità",
+      "gradBadge": "Diplomato Common Core 42",
+      "hackathonBadge": "2° Posto — Zero One Hackathon",
       "viewCV": "Visualizza il Mio CV",
       "seeProjects": "Vedi i Progetti",
       "getInTouch": "Contattami"
@@ -328,7 +336,7 @@ const translations = {
     },
     "education": {
       "title": "Istruzione",
-      "inProgress": "In Corso",
+      "inProgress": "Common Core Completato",
       "school42": "42 Vienna",
       "school42Degree": "Laurea/RNCP 6 - Sviluppatore Software Full Stack",
       "school42Desc": "Il curriculum a 42 enfatizza l'apprendimento tra pari, dove gli studenti valutano il lavoro reciproco, migliorando le competenze di comunicazione e lavoro di squadra. Copre un'ampia gamma di argomenti tecnici, tra cui linguaggi di programmazione, algoritmi, amministrazione di sistema e cybersicurezza.",
@@ -366,10 +374,10 @@ const translations = {
     },
     "focus": {
       "title": "Focus Attuale",
-      "item1Title": "🔥 Completamento del Curriculum della Scuola 42",
-      "item1Desc": "Costruzione di competenze nello sviluppo full-stack",
-      "item2Title": "💼 Alla Ricerca di Opportunità come Sviluppatore Software",
-      "item2Desc": "Pronto a contribuire e crescere in un ambiente professionale",
+      "item1Title": "🎓 Common Core della Scuola 42 Completato",
+      "item1Desc": "Curriculum completato — dalla programmazione di sistemi in C allo sviluppo web full-stack",
+      "item2Title": "🥈 2° Posto — Zero One Supercomputing Hackathon",
+      "item2Desc": "Ottenuto uno stage grazie all'hackathon — inizio il mio primo ruolo nel settore",
       "item3Title": "🌱 Esplorazione di Cybersicurezza e Tecnologie Emergenti",
       "item3Desc": "Appassionato di soluzioni innovative"
     },

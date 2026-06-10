@@ -86,7 +86,10 @@
       '42CC': 'projects/42cc/',
       'Minishell': 'projects/minishell/',
       'webserv': 'projects/webserv/',
-      'PISSM': 'projects/pissm/'
+      'PISSM': 'projects/pissm/',
+      'AlpacaParty-ft_transcendence': 'projects/transcendence/',
+      'ZeroOneHack-PromptCorn-Sub': 'projects/promptcorn/',
+      'Veltara': 'projects/veltara/'
     };
     
     const showcaseUrl = showcasePages[project.name];
