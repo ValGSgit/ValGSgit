@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👋 Hi there! I'm Valentino
+# 👋 Hi there! I'm Valentino.
 
 **Full-Stack Software Developer** &nbsp;·&nbsp; 🇦🇷 From Argentina &nbsp;·&nbsp; 🇦🇹 Based in Vienna
 
